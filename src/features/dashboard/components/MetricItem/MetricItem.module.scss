@@ -1,0 +1,34 @@
+.card {
+  padding: $space-400;
+  border-radius: $radius-400;
+  background: $bg-light;
+}
+
+.footer {
+  display: flex;
+  align-items: flex-end;
+  gap: $space-200;
+}
+
+.name {
+  @include body-l-med;
+  color: $text-on-light;
+}
+
+.value {
+  @include heading-xl;
+  color: $text-on-light;
+}
+
+.update {
+  @include body-m;
+  padding-bottom: $space-200;
+}
+
+.positive {
+  color: $text-on-light-success;
+}
+
+.negative {
+  color: $text-on-light-error;
+}

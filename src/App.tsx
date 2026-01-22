@@ -1,3 +1,4 @@
+import MetricList from "@features/dashboard/components/MetricList/MetricList";
 import { fetchMetrics } from "@features/dashboard/state";
 import { useDispatch } from "@store";
 import { useEffect } from "react";
@@ -9,7 +10,7 @@ function App() {
     dispatch(fetchMetrics());
   }, [dispatch]);
 
-  return <p>hello</p>;
+  return <MetricList />;
 }
 
 export default App;
