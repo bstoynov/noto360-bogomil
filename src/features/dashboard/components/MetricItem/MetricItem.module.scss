@@ -1,7 +1,11 @@
 .card {
+  flex: 1;
   padding: $space-400;
   border-radius: $radius-400;
   background: $bg-light;
+  display: flex;
+  flex-direction: column;
+  gap: $space-400;
 }
 
 .footer {
@@ -15,6 +19,11 @@
   color: $text-on-light;
 }
 
+.icon {
+  width: $space-400;
+  height: $space-400;
+}
+
 .value {
   @include heading-xl;
   color: $text-on-light;
@@ -23,6 +32,9 @@
 .update {
   @include body-m;
   padding-bottom: $space-200;
+  display: flex;
+  align-items: center;
+  gap: $space-100;
 }
 
 .positive {

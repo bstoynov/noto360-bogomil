@@ -1,3 +1,4 @@
+import { Icon } from "@ui";
 import styles from "./MetricItem.module.scss";
 import type { MetricItemProps } from "./MetricItem.types";
 
@@ -11,15 +12,14 @@ function MetricItem({ value, delta, name, suffixText, unit }: MetricItemProps) {
           {value}
           {unit}
         </p>
-        <div>
-          <p
-            className={`${styles.update} ${delta >= 0 ? styles.positive : styles.negative}`}
-          >
-            {delta < 0 ? "-" : "+"}
-            {Math.abs(delta)}
-            {unit} {suffixText}
-          </p>
-        </div>
+        <p
+          className={`${styles.update} ${delta >= 0 ? styles.positive : styles.negative}`}
+        >
+          <Icon name="arrowCircle" className={styles.icon} />
+          {delta < 0 ? "-" : "+"}
+          {Math.abs(delta)}
+          {unit} {suffixText}
+        </p>
       </div>
     </li>
   );
