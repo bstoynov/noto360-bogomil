@@ -1,4 +1,4 @@
-import type { MetricItem } from "@features/dashboard/state/metrics/metrics.types";
+import type { MetricItem } from "@features/dashboard/types";
 
 export type MetricItemProps = MetricItem & MetricItemMetaData;
 

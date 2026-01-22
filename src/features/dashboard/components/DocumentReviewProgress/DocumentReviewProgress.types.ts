@@ -1,6 +1,3 @@
-import type { DocumentStatusResponse } from "@features/dashboard/state/documentStatus/documentStatus.types";
+import type { Document } from "@features/dashboard/types";
 
-export type DocumentReviewProgressProps = Pick<
-  DocumentStatusResponse,
-  "reviewProgress"
->;
+export type DocumentReviewProgressProps = Pick<Document, "reviewProgress">;
