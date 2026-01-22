@@ -1,0 +1,73 @@
+$font-family: 'Inter', sans-serif;
+
+@mixin heading-xl {
+  font-size: 2.25rem; // 36px
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+@mixin heading-l {
+  font-size: 1.5rem; // 24px
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+@mixin heading-m {
+  font-size: 1.25rem; // 20px
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+@mixin heading-s {
+  font-size: 1rem; // 16px
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+@mixin body-l-med {
+  font-size: 0.875rem; // 14px
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+@mixin body-l {
+  font-size: 0.875rem; // 14px
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+@mixin body-m-med {
+  font-size: 0.8125rem; // 13px
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+@mixin body-m {
+  font-size: 0.8125rem; // 13px
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+@mixin body-s-med {
+  font-size: 0.75rem; // 12px
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+@mixin body-s {
+  font-size: 0.75rem; // 12px
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+@mixin label-s {
+  font-size: 0.75rem; // 12px
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+@mixin caption {
+  font-size: 0.6875rem; // 11px
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
