@@ -1,0 +1,27 @@
+.hint {
+  padding: $space-200;
+  border-radius: $radius-200;
+  background: $bg-hint;
+  display: flex;
+  flex-direction: column;
+  gap: $space-100;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  @include body-l-med;
+  color: $text-on-light;
+}
+
+.message {
+  @include caption;
+  color: $text-on-light;
+}
+
+.icon {
+  height: $space-400;
+}

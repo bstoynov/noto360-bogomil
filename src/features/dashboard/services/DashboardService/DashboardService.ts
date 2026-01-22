@@ -2,6 +2,7 @@ import { createService } from "@api";
 import {
   MetricsResponseSchema,
   DocumentStatusResponseSchema,
+  AiSummaryResponseSchema,
 } from "./DashboardService.schemas";
 
 export default createService({
@@ -14,5 +15,10 @@ export default createService({
     method: "GET",
     url: "/documentStatus",
     responseSchema: DocumentStatusResponseSchema,
+  },
+  getAiSummary: {
+    method: "GET",
+    url: "/aiSummary",
+    responseSchema: AiSummaryResponseSchema,
   },
 });

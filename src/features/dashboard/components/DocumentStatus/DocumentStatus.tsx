@@ -4,6 +4,7 @@ import {
 } from "@features/dashboard/state";
 import { useDispatch, useSelector } from "@store";
 import { ActionCard } from "@ui";
+import MetaRow from "../MetaRow/MetaRow";
 import { useEffect } from "react";
 import DocumentInfo from "../DocumentInfo/DocumentInfo";
 import styles from "./DocumentStatus.module.scss";
@@ -37,18 +38,14 @@ function DocumentStatus() {
     <ActionCard title="Document Status">
       <div>
         <DocumentInfo name={name} size={size} type={type} />
-        <div className={styles.metaRow}>
-          <p className={styles.metaKey}>Analyzed:</p>
-          {/* TODO: convert using dayjs */}
-          <p className={styles.metaValue}>{analyzedTimestamp}</p>
-        </div>
-
-        <div className={styles.metaRow}>
-          <p className={styles.metaKey}>Last Edited:</p>
-          <p className={styles.metaValue}>
-            {lastEditAuthorName}, {lastEditAuthorTitle}
-          </p>
-        </div>
+        {/* TODO: convert using dayjs */}
+        <ul>
+          <MetaRow label="Analyzed" textValue={analyzedTimestamp} />
+          <MetaRow
+            label="Last Edited"
+            textValue={`${lastEditAuthorName}, ${lastEditAuthorTitle}`}
+          />
+        </ul>
         <DocumentReviewProgress reviewProgress={reviewProgress} />
         <div className={styles.stage}>Stage: {stage}</div>
       </div>

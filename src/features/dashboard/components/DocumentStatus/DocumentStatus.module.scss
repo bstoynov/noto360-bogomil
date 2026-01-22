@@ -1,20 +1,3 @@
-.metaRow {
-  display: flex;
-  justify-content: space-between;
-  padding: $space-200 0;
-  @include bottom-separator;
-}
-
-.metaKey {
-  @include body-s;
-  color: $text-on-light-muted;
-}
-
-.metaValue {
-  @include body-s;
-  color: $text-on-light;
-}
-
 .stage {
   @include caption;
   padding: $space-25 $space-100;

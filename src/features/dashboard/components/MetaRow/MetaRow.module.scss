@@ -1,0 +1,16 @@
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  padding: $space-200 0;
+  @include bottom-separator;
+}
+
+.metaKey {
+  @include body-s;
+  color: $text-on-light-muted;
+}
+
+.metaTextValue {
+  @include body-s;
+  color: $text-on-light;
+}

@@ -3,6 +3,7 @@ import download from "../../../public/icons/download.svg";
 import eye from "../../../public/icons/eye.svg";
 import dotsHorizontal from "../../../public/icons/dots-horizontal.svg";
 import pdf from "../../../public/icons/pdf.svg";
+import lightbulb from "../../../public/icons/lightbulb.svg";
 
 export default {
   arrowCircle,
@@ -10,4 +11,5 @@ export default {
   eye,
   dotsHorizontal,
   pdf,
+  lightbulb,
 };
