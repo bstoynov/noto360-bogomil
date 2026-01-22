@@ -1,7 +1,7 @@
 import { createService } from "@api";
 import {
   MetricsResponseSchema,
-  DocumentStatusResponseSchema,
+  DocumentsResponseSchema,
   AiSummaryResponseSchema,
 } from "../schemas";
 
@@ -11,10 +11,10 @@ export default createService({
     url: "/metrics",
     responseSchema: MetricsResponseSchema,
   },
-  getDocumentStatus: {
+  getDocuments: {
     method: "GET",
-    url: "/documentStatus",
-    responseSchema: DocumentStatusResponseSchema,
+    url: "/documents",
+    responseSchema: DocumentsResponseSchema,
   },
   getAiSummary: {
     method: "GET",

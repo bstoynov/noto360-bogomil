@@ -1,6 +1,6 @@
 import {
-  fetchDocumentStatus,
-  selectDocumentStatus,
+  fetchDocuments,
+  selectPrimaryDocument,
 } from "@features/dashboard/state";
 import { useDispatch, useSelector } from "@store";
 import { ActionCard } from "@ui";
@@ -12,32 +12,32 @@ import DocumentReviewProgress from "../DocumentReviewProgress/DocumentReviewProg
 
 function DocumentStatus() {
   const dispatch = useDispatch();
-  const documentStatus = useSelector(selectDocumentStatus);
+  const document = useSelector(selectPrimaryDocument);
 
   useEffect(() => {
-    dispatch(fetchDocumentStatus());
+    dispatch(fetchDocuments());
   }, [dispatch]);
 
   // TODO: handle loading skeleton
-  if (!documentStatus) {
+  if (!document) {
     return null;
   }
 
   const {
     name,
     size,
-    type,
+    format,
     analyzedTimestamp,
     lastEditAuthorName,
     lastEditAuthorTitle,
     reviewProgress,
     stage,
-  } = documentStatus;
+  } = document;
 
   return (
     <ActionCard title="Document Status">
       <div>
-        <DocumentInfo name={name} size={size} type={type} />
+        <DocumentInfo name={name} size={size} format={format} />
         {/* TODO: convert using dayjs */}
         <ul>
           <MetaRow label="Analyzed" textValue={analyzedTimestamp} />

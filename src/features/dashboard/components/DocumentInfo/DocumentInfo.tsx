@@ -1,15 +1,19 @@
 import { Icon } from "@ui";
 import type { DocumentInfoProps } from "./DocumentInfo.types";
 import styles from "./DocumentInfo.module.scss";
+import { documentTypeIconMap } from "./DocumentInfo.constants";
 
-function DocumentInfo({ name, size, type }: DocumentInfoProps) {
+function DocumentInfo({ name, size, format }: DocumentInfoProps) {
   return (
     <div className={styles.info}>
-      <Icon name="pdf" className={styles.file} />
+      <Icon name={documentTypeIconMap[format]} className={styles.file} />
       <div className={styles.data}>
-        <p className={styles.name}>{name}</p>
+        <p className={styles.name}>
+          {name}
+          {`.${format}`.toLowerCase()}
+        </p>
         <p className={styles.meta}>
-          {type} · {size} MB
+          {format} · {size} MB
         </p>
       </div>
 

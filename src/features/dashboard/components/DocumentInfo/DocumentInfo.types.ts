@@ -1,6 +1,3 @@
-import type { DocumentStatusResponse } from "@features/dashboard/state/documentStatus/documentStatus.types";
+import type { Document } from "../../types";
 
-export type DocumentInfoProps = Pick<
-  DocumentStatusResponse,
-  "name" | "type" | "size"
->;
+export type DocumentInfoProps = Pick<Document, "name" | "format" | "size">;
