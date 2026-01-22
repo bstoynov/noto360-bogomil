@@ -16,3 +16,13 @@
   width: $space-500;
   color: $text-on-light;
 }
+
+.title {
+  @include heading-m;
+  color: $text-on-light;
+}
+
+.subtitle {
+  @include body-s;
+  color: $text-on-dark-muted
+}

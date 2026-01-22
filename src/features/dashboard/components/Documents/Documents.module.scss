@@ -1,0 +1,7 @@
+.content {}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: $space-200;
+}

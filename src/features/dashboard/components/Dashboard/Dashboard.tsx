@@ -1,4 +1,5 @@
 import AISummary from "../AISummary/AISummary";
+import Documents from "../Documents/Documents";
 import DocumentStatus from "../DocumentStatus/DocumentStatus";
 import MetricList from "../MetricList/MetricList";
 import styles from "./Dashboard.module.scss";
@@ -6,9 +7,14 @@ import styles from "./Dashboard.module.scss";
 function Dashboard() {
   return (
     <div className={styles.dashboard}>
-      <DocumentStatus />
-      <AISummary />
-      <MetricList />
+      <div className={`${styles.column} ${styles.left}`}>
+        <DocumentStatus />
+        <AISummary />
+        <Documents />
+      </div>
+      <div className={`${styles.column} ${styles.right}`}>
+        <MetricList />
+      </div>
     </div>
   );
 }

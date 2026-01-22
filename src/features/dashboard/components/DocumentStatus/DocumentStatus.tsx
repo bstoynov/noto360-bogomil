@@ -1,22 +1,13 @@
-import {
-  fetchDocuments,
-  selectPrimaryDocument,
-} from "@features/dashboard/state";
-import { useDispatch, useSelector } from "@store";
+import { selectPrimaryDocument } from "@features/dashboard/state";
+import { useSelector } from "@store";
 import { ActionCard } from "@ui";
 import MetaRow from "../MetaRow/MetaRow";
-import { useEffect } from "react";
 import DocumentInfo from "../DocumentInfo/DocumentInfo";
 import styles from "./DocumentStatus.module.scss";
 import DocumentReviewProgress from "../DocumentReviewProgress/DocumentReviewProgress";
 
 function DocumentStatus() {
-  const dispatch = useDispatch();
   const document = useSelector(selectPrimaryDocument);
-
-  useEffect(() => {
-    dispatch(fetchDocuments());
-  }, [dispatch]);
 
   // TODO: handle loading skeleton
   if (!document) {

@@ -2,8 +2,6 @@
   display: flex;
   gap: $space-200;
   padding-bottom: $space-300;
-
-  @include bottom-separator;
 }
 
 .file {

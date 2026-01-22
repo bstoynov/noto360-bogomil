@@ -1,4 +1,21 @@
 .dashboard {
   background: $bg-light-subtle;
   padding: $space-600 $space-500;
+  // TODO: this should be a grid
+  display: flex;
+  gap: $space-600;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: $space-500;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 3;
 }
