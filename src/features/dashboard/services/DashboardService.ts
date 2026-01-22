@@ -3,7 +3,7 @@ import {
   MetricsResponseSchema,
   DocumentStatusResponseSchema,
   AiSummaryResponseSchema,
-} from "./DashboardService.schemas";
+} from "../schemas";
 
 export default createService({
   getMetrics: {

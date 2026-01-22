@@ -1,4 +1,4 @@
-import { DocumentStatusResponseSchema } from "@features/dashboard/services";
+import type { DocumentStatusResponseSchema } from "../../schemas";
 import type { DataState } from "src/store/store.types";
 import type z from "zod";
 

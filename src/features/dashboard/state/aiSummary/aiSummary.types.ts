@@ -1,4 +1,4 @@
-import { AiSummaryResponseSchema } from "@features/dashboard/services";
+import type { AiSummaryResponseSchema } from "../../schemas";
 import type { DataState } from "src/store/store.types";
 import type z from "zod";
 
