@@ -1,0 +1,18 @@
+.card {
+  padding: $space-400;
+  border-radius: $radius-400;
+  background: $bg-light;
+  display: flex;
+  flex-direction: column;
+  gap: $space-300;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dots {
+  width: $space-500;
+  color: $text-on-light;
+}

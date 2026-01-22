@@ -1,0 +1,37 @@
+.info {
+  display: flex;
+  gap: $space-200;
+  padding-bottom: $space-300;
+
+  @include bottom-separator;
+}
+
+.file {
+  height: $space-800;
+}
+
+.data {
+  flex: 1;
+}
+
+.name {
+  color: $text-on-light;
+  @include body-l-med;
+}
+
+.meta {
+  color: $text-on-dark-muted;
+  @include caption;
+}
+
+.icons {
+  display: flex;
+  gap: $space-200;
+  align-items: center;
+}
+
+.icon {
+  width: $space-500;
+  height: $space-500;
+  color: $text-on-light-muted;
+}

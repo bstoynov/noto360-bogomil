@@ -1,0 +1,14 @@
+@use 'colors' as *;
+
+@mixin bottom-separator {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $border-muted;
+    bottom: 0;
+  }
+}

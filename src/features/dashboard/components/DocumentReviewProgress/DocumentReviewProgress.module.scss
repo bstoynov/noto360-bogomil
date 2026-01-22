@@ -1,0 +1,30 @@
+.progresGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: $space-300;
+}
+
+.title {
+  @include heading-s;
+  color: $text-on-light;
+}
+
+.progressText {
+  @include body-s;
+  color: $text-on-light-subtle;
+}
+
+.progressTrack {
+  height: $space-200;
+  background-color: $bg-light-subtle;
+  border-radius: $radius-100;
+  overflow: hidden;
+  margin: $space-300 0;
+}
+
+.progressFill {
+  height: 100%;
+  background: $gradient-progress;
+  border-radius: $radius-100;
+}
