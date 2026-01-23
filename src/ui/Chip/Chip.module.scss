@@ -1,0 +1,24 @@
+.chip {
+  padding: $space-100 $space-200;
+  border-radius: $radius-full;
+  display: flex;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.text {
+  @include body-s-med;
+  // TODO: see if this override is okay
+  line-height: 1;
+}
+
+.warning {
+  background: $bg-error;
+  color: $text-on-light-error;
+  border-color: $text-on-light-error;
+}
+
+.icon {
+  height: $space-300;
+}

@@ -1,6 +1,7 @@
 .metaRow {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: $space-200 0;
   @include bottom-separator;
 }

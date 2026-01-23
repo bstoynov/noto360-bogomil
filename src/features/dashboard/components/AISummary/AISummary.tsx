@@ -1,6 +1,6 @@
 import { fetchAiSummary, selectAiSummary } from "@features/dashboard/state";
 import { useDispatch, useSelector } from "@store";
-import { ActionCard, Hint } from "@ui";
+import { ActionCard, Button, Chip, Hint } from "@ui";
 import { useEffect } from "react";
 import MetaRow from "../MetaRow/MetaRow";
 import styles from "./AISummary.module.scss";
@@ -18,17 +18,21 @@ function AISummary() {
     return null;
   }
 
-  const { clauseType, impact, recommendation } = aiSummary;
+  const { clauseType, impact, recommendation, hasSuggestedRewrite, riskSeverity, riskScore } = aiSummary;
 
   return (
     <ActionCard title="AI Summary">
       <div className={styles.content}>
         <ul>
-          <MetaRow label="Risk Zone" customValue={<p>hello</p>} />
+          {/* TODO: change icon to warning */}
+          <MetaRow label="Risk Zone" customValue={<Chip variant="warning" text={`${riskSeverity} ${riskScore}`} iconName="lightbulb" />} />
           <MetaRow label="Clause Type" textValue={clauseType} />
           <MetaRow label="Impact" textValue={impact} />
         </ul>
         <Hint title="Recommendation" message={recommendation} />
+        {hasSuggestedRewrite &&
+          <Button variant="primary">See Suggested Rewrite</Button>
+        }
       </div>
     </ActionCard>
   );

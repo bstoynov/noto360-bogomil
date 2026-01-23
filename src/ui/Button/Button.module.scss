@@ -1,0 +1,10 @@
+.button {
+  padding: $space-200 0;
+  border-radius: $radius-200;
+}
+
+.primary {
+  @include body-l-med;
+  color: $text-on-dark;
+  background: $bg-dark;
+}
