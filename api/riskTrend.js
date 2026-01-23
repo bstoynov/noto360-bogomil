@@ -10,6 +10,7 @@ export default function handler(req, res) {
   res.status(200).json({
     yStart: 0,
     yEnd: 40,
+    dataSize: 12,
     data: {
       RiskExposure: [8, 12, 10, 15, 11, 12, 9, 14, 7, 16, 13, 10],
       DocumentsAnalyzed: [12, 18, 22, 28, 35, 47, 32, 38, 25, 42, 30, 36],
