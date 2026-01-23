@@ -8,17 +8,17 @@ import {
 export default createService({
   getMetrics: {
     method: "GET",
-    url: "/metrics",
+    url: "/api/metrics",
     responseSchema: MetricsResponseSchema,
   },
   getDocuments: {
     method: "GET",
-    url: "/documents",
+    url: "/api/documents",
     responseSchema: DocumentsResponseSchema,
   },
   getAiSummary: {
     method: "GET",
-    url: "/aiSummary",
+    url: "/api/aiSummary",
     responseSchema: AiSummaryResponseSchema,
   },
 });
