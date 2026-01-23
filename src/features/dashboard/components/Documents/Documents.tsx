@@ -31,7 +31,6 @@ function Documents() {
             />
           ))}
         </ul>
-        {/* TODO: fix icon */}
         <Link text="Show all" iconName="chevronDown" />
       </div>
     </ActionCard>
