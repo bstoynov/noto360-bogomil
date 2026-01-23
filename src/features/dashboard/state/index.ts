@@ -6,3 +6,6 @@ export * from "./documents/documents.slice";
 
 export { default as aiSummaryReducer } from "./aiSummary/aiSummary.slice";
 export * from "./aiSummary/aiSummary.slice";
+
+export { default as riskTrendReducer } from "./riskTrend/riskTrend.slice";
+export * from "./riskTrend/riskTrend.slice";

@@ -3,6 +3,7 @@ import {
   metricsReducer,
   documentsReducer,
   aiSummaryReducer,
+  riskTrendReducer,
 } from "@features/dashboard/state";
 
 export default configureStore({
@@ -10,5 +11,6 @@ export default configureStore({
     metrics: metricsReducer,
     documents: documentsReducer,
     aiSummary: aiSummaryReducer,
+    riskTrend: riskTrendReducer,
   },
 });

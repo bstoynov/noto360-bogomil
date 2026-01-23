@@ -3,6 +3,7 @@ import {
   MetricsResponseSchema,
   DocumentsResponseSchema,
   AiSummaryResponseSchema,
+  RiskTrendResponseSchema,
 } from "../schemas";
 
 export default createService({
@@ -20,5 +21,10 @@ export default createService({
     method: "GET",
     url: "/api/aiSummary",
     responseSchema: AiSummaryResponseSchema,
+  },
+  getRiskTrend: {
+    method: "GET",
+    url: "/api/riskTrend",
+    responseSchema: RiskTrendResponseSchema,
   },
 });
