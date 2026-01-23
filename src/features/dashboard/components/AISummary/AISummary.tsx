@@ -18,21 +18,36 @@ function AISummary() {
     return null;
   }
 
-  const { clauseType, impact, recommendation, hasSuggestedRewrite, riskSeverity, riskScore } = aiSummary;
+  const {
+    clauseType,
+    impact,
+    recommendation,
+    hasSuggestedRewrite,
+    riskSeverity,
+    riskScore,
+  } = aiSummary;
 
   return (
     <ActionCard title="AI Summary">
       <div className={styles.content}>
         <div>
-          {/* TODO: change icon to warning */}
-          <MetaRow label="Risk Zone" customValue={<Chip variant="warning" text={`${riskSeverity} ${riskScore}`} iconName="lightbulb" />} />
+          <MetaRow
+            label="Risk Zone"
+            customValue={
+              <Chip
+                variant="warning"
+                text={`${riskSeverity} ${riskScore}`}
+                iconName="warning"
+              />
+            }
+          />
           <MetaRow label="Clause Type" textValue={clauseType} />
           <MetaRow label="Impact" textValue={impact} />
         </div>
         <Hint title="Recommendation" message={recommendation} />
-        {hasSuggestedRewrite &&
+        {hasSuggestedRewrite && (
           <Button variant="primary">See Suggested Rewrite</Button>
-        }
+        )}
       </div>
     </ActionCard>
   );

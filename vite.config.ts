@@ -26,6 +26,7 @@ export default defineConfig({
       "@constants": path.resolve(__dirname, "./src/constants"),
       "@styles": path.resolve(__dirname, "./src/styles"),
       "@ui": path.resolve(__dirname, "./src/ui"),
+      "@icons": path.resolve(__dirname, "./public/icons"),
     },
   },
 });
