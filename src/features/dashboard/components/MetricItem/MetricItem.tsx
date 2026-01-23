@@ -5,21 +5,21 @@ import type { MetricItemProps } from "./MetricItem.types";
 function MetricItem({ value, delta, name, suffixText, unit }: MetricItemProps) {
   return (
     <li className={styles.card}>
-      <p className={styles.name}>{name}</p>
+      <span className={styles.name}>{name}</span>
 
       <div className={styles.footer}>
-        <p className={styles.value}>
+        <span className={styles.value}>
           {value}
           {unit}
-        </p>
-        <p
+        </span>
+        <span
           className={`${styles.update} ${delta >= 0 ? styles.positive : styles.negative}`}
         >
           <Icon name="arrowCircle" className={styles.icon} />
           {delta < 0 ? "-" : "+"}
           {Math.abs(delta)}
           {unit} {suffixText}
-        </p>
+        </span>
       </div>
     </li>
   );

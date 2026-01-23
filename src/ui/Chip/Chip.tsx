@@ -7,9 +7,9 @@ function Chip({ variant, text, iconName }: ChipProps) {
     <div className={`${styles.chip} ${styles[variant]}`}>
       {iconName && <Icon name={iconName} className={styles.icon} />}
       {/* TODO: body text is not centered with the icon due to line height */}
-      <p className={styles.text}>
+      <span className={styles.text}>
         {text}
-      </p>
+      </span>
     </div>
   );
 }

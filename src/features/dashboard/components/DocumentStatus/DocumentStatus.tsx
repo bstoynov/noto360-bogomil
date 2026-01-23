@@ -30,13 +30,13 @@ function DocumentStatus() {
       <div>
         <DocumentInfo name={name} size={size} format={format} />
         {/* TODO: convert using dayjs */}
-        <ul>
+        <div>
           <MetaRow label="Analyzed" textValue={analyzedTimestamp} />
           <MetaRow
             label="Last Edited"
             textValue={`${lastEditAuthorName}, ${lastEditAuthorTitle}`}
           />
-        </ul>
+        </div>
         <DocumentReviewProgress reviewProgress={reviewProgress} />
         <div className={styles.stage}>Stage: {stage}</div>
       </div>

@@ -23,12 +23,12 @@ function AISummary() {
   return (
     <ActionCard title="AI Summary">
       <div className={styles.content}>
-        <ul>
+        <div>
           {/* TODO: change icon to warning */}
           <MetaRow label="Risk Zone" customValue={<Chip variant="warning" text={`${riskSeverity} ${riskScore}`} iconName="lightbulb" />} />
           <MetaRow label="Clause Type" textValue={clauseType} />
           <MetaRow label="Impact" textValue={impact} />
-        </ul>
+        </div>
         <Hint title="Recommendation" message={recommendation} />
         {hasSuggestedRewrite &&
           <Button variant="primary">See Suggested Rewrite</Button>

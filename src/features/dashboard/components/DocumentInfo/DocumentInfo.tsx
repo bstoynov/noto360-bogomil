@@ -8,13 +8,13 @@ function DocumentInfo({ name, size, format }: DocumentInfoProps) {
     <div className={styles.info}>
       <Icon name={documentTypeIconMap[format]} className={styles.file} />
       <div className={styles.data}>
-        <p className={styles.name}>
+        <span className={styles.name}>
           {name}
           {`.${format}`.toLowerCase()}
-        </p>
-        <p className={styles.meta}>
+        </span>
+        <span className={styles.meta}>
           {format} · {size} MB
-        </p>
+        </span>
       </div>
 
       <div className={styles.icons}>

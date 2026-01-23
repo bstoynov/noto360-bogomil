@@ -8,7 +8,7 @@ function ActionCard({ title, subtitle, children }: ActionCardProps) {
       <div className={styles.header}>
         <div>
           <h3 className={styles.title}>{title}</h3>
-          {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+          {subtitle && <span className={styles.subtitle}>{subtitle}</span>}
         </div>
         <Icon name="dotsHorizontal" className={styles.dots} />
       </div>

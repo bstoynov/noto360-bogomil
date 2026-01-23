@@ -7,7 +7,7 @@ function Hint({ title, message }: HintProps) {
     <div className={styles.hint}>
       <div className={styles.header}>
         <Icon name="lightbulb" className={styles.icon} />
-        <p className={styles.title}>{title}</p>
+        <h4 className={styles.title}>{title}</h4>
       </div>
       <p className={styles.message}>{message}</p>
     </div>

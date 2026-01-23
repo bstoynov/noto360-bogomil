@@ -3,11 +3,11 @@ import type { MetaRowProps } from "./MetaRow.types";
 
 function MetaRow({ label, textValue, customValue }: MetaRowProps) {
   return (
-    <li className={styles.metaRow}>
-      <p className={styles.metaKey}>{label}:</p>
-      {textValue && <p className={styles.metaTextValue}>{textValue}</p>}
-      {customValue}
-    </li>
+    <dl className={styles.metaRow}>
+      <dt className={styles.metaKey}>{label}:</dt>
+      {textValue && <dd className={styles.metaTextValue}>{textValue}</dd>}
+      {customValue && <dd>{customValue}</dd>}
+    </dl>
   );
 }
 

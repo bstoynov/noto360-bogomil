@@ -7,8 +7,8 @@ function DocumentReviewProgress({
   return (
     <div className={styles.container}>
       <div className={styles.progresGroup}>
-        <p className={styles.title}>AI Review Progress</p>
-        <p className={styles.progressText}>{reviewProgress}% complete</p>
+        <h4 className={styles.title}>AI Review Progress</h4>
+        <span className={styles.progressText}>{reviewProgress}% complete</span>
       </div>
       <div className={styles.progressTrack}>
         <div
