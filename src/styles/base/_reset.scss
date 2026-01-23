@@ -7,3 +7,10 @@
 li {
   list-style-type: none;
 }
+
+button {
+  outline: unset;
+  border: unset;
+  background: unset;
+  cursor: pointer;
+}
