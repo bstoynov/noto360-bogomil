@@ -1,0 +1,17 @@
+// TODO: check exact styles
+// TODO: check active & visited style
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-100;
+  text-decoration: underline;
+}
+
+.text {
+  @include body-s-med;
+  color: $text-on-light-link;
+}
+
+.icon {
+  height: $space-300;
+}

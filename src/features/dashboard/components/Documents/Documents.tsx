@@ -1,6 +1,6 @@
 import { fetchDocuments, selectDocuments } from "@features/dashboard/state";
 import { useDispatch, useSelector } from "@store";
-import { ActionCard } from "@ui";
+import { ActionCard, Link } from "@ui";
 import { useEffect } from "react";
 import styles from "./Documents.module.scss";
 import DocumentInfo from "../DocumentInfo/DocumentInfo";
@@ -31,7 +31,8 @@ function Documents() {
             />
           ))}
         </ul>
-        {/* TODO: show more */}
+        {/* TODO: fix icon */}
+        <Link text="Show all" iconName="arrowCircle" />
       </div>
     </ActionCard>
   );
