@@ -1,7 +1,7 @@
 import type { IconProps } from "../Icon/Icon.types";
 
 export type ChipProps = {
-  variant: 'warning';
+  variant: "aqua" | "ruby";
   text: string;
-  iconName?: IconProps['name'];
-}
+  iconName?: IconProps["name"];
+};

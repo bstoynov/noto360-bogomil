@@ -14,10 +14,16 @@
   line-height: 1;
 }
 
-.warning {
-  background: $bg-error;
-  color: $text-on-light-error;
-  border-color: $text-on-light-error;
+.aqua {
+  background: $bg-aqua;
+  color: $text-aqua;
+  border-color: $text-aqua;
+}
+
+.ruby {
+  background: $bg-ruby;
+  color: $text-ruby;
+  border-color: $text-ruby;
 }
 
 .icon {

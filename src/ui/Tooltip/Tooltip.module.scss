@@ -1,0 +1,25 @@
+.tooltip {
+  padding: $space-200;
+  border-radius: $radius-200;
+  border-width: 1px;
+  border-style: solid;
+  display: inline-flex;
+  align-items: center;
+}
+
+.text {
+  @include body-m-med;
+  line-height: 1;
+}
+
+.ruby {
+  background: $bg-ruby;
+  color: $text-ruby;
+  border-color: $text-ruby;
+}
+
+.aqua {
+  background: $bg-aqua;
+  color: $text-aqua;
+  border-color: $text-aqua;
+}
