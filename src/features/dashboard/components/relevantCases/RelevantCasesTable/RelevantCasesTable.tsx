@@ -1,7 +1,10 @@
-import { Card, Icon } from "@ui";
-import { useDispatch } from "@store";
+import { Card, Icon, Shimmer } from "@ui";
+import { useDispatch, useSelector } from "@store";
 import { useEffect } from "react";
-import { fetchRelevantCases } from "@features/dashboard/state";
+import {
+  fetchRelevantCases,
+  selectRelevantCasesIsLoading,
+} from "@features/dashboard/state";
 import RelevantCasesTableHeader from "../RelevantCasesTableHeader/RelevantCasesTableHeader";
 import RelevantCasesTableContent from "../RelevantCasesTableContent/RelevantCasesTableContent";
 import { useRelevantCasesSorted } from "@features/dashboard/hooks";
@@ -9,15 +12,16 @@ import RelevantCasesLastPrecedentUpdate from "../RelevantCasesLastPrecedentUpdat
 
 function RelevantCasesTable() {
   const dispatch = useDispatch();
+  const relevantCases = useRelevantCasesSorted();
+  const isLoading = useSelector(selectRelevantCasesIsLoading);
 
   useEffect(() => {
     dispatch(fetchRelevantCases());
   }, [dispatch]);
 
-  const relevantCases = useRelevantCasesSorted();
-
-  // TODO: skeleton
-  if (!relevantCases) {
+  if (isLoading) {
+    return <Shimmer height={394} />;
+  } else if (!relevantCases) {
     return null;
   }
 

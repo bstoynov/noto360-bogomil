@@ -9,3 +9,4 @@ export { default as Chip } from "./components/Chip/Chip";
 export { default as ChipButton } from "./components/ChipButton/ChipButton";
 export { default as Link } from "./components/Link/Link";
 export { default as Tooltip } from "./components/Tooltip/Tooltip";
+export { default as Shimmer } from "./components/Shimmer/Shimmer";

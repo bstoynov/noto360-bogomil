@@ -32,9 +32,11 @@ const metricsSlice = createSlice({
   selectors: {
     selectMetrics: (state) => state.data,
     selectMetricsDataState: (state) => state.dataState,
+    selectMetricsIsLoading: (state) => state.dataState === "pending",
   },
 });
 
-export const { selectMetrics, selectMetricsDataState } = metricsSlice.selectors;
+export const { selectMetrics, selectMetricsDataState, selectMetricsIsLoading } =
+  metricsSlice.selectors;
 
 export default metricsSlice.reducer;

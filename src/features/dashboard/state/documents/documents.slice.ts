@@ -36,11 +36,15 @@ const documentsSlice = createSlice({
   selectors: {
     selectDocuments: (state) => state.data,
     selectDocumentsDataState: (state) => state.dataState,
+    selectDocumentsIsLoading: (state) => state.dataState === "pending",
   },
 });
 
-export const { selectDocuments, selectDocumentsDataState } =
-  documentsSlice.selectors;
+export const {
+  selectDocuments,
+  selectDocumentsDataState,
+  selectDocumentsIsLoading,
+} = documentsSlice.selectors;
 
 export const selectPrimaryDocument = createSelector(
   [selectDocuments],

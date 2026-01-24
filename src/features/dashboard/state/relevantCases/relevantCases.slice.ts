@@ -40,6 +40,7 @@ const relevantCasesSlice = createSlice({
     selectRelevantCasesLastPrecedentUpdate: (state) =>
       state.data?.lastPrecedentUpdate,
     selectRelevantCasesDataState: (state) => state.dataState,
+    selectRelevantCasesIsLoading: (state) => state.dataState === "pending",
   },
 });
 
@@ -47,6 +48,7 @@ export const {
   selectRelevantCases,
   selectRelevantCasesDataState,
   selectRelevantCasesLastPrecedentUpdate,
+  selectRelevantCasesIsLoading,
 } = relevantCasesSlice.selectors;
 
 export const selectRelevantCasesSorted = createSelector(

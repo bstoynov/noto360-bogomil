@@ -1,0 +1,25 @@
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.shimmer {
+  position: relative;
+  overflow: hidden;
+  background: $bg-light-muted;
+  border-radius: $radius-400;
+}
+
+.animation {
+  height: 100%;
+  animation: shimmer 1.3s linear infinite;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent);
+}

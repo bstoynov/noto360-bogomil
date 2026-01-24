@@ -1,10 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import { CartesianGrid, LineChart, XAxis, YAxis } from "recharts";
-import { Card } from "@ui";
+import { Card, Shimmer } from "@ui";
 import styles from "./RiskTrendChart.module.scss";
 import RiskChartTooltip from "../RiskChartTooltip/RiskChartTooltip";
 import { useDispatch, useSelector } from "@store";
-import { fetchRiskTrend, selectRiskTrend } from "@features/dashboard/state";
+import {
+  fetchRiskTrend,
+  selectRiskTrend,
+  selectRiskTrendIsLoading,
+} from "@features/dashboard/state";
 import { parseLineChartData } from "./RiskTrendChart.utils";
 import { RiskTrendTypeSchema } from "@features/dashboard/schemas";
 import RiskChartLines from "../RiskChartLines/RiskChartLines";
@@ -14,6 +18,7 @@ import RiskChartLegend from "../RiskChartLegend/RiskChartLegend";
 function RiskTrendChart() {
   const dispatch = useDispatch();
   const riskTrend = useSelector(selectRiskTrend);
+  const isLoading = useSelector(selectRiskTrendIsLoading);
 
   useEffect(() => {
     dispatch(fetchRiskTrend());
@@ -34,8 +39,9 @@ function RiskTrendChart() {
     visible: visibilityMap[type],
   }));
 
-  // TODO: handle loading skeleton
-  if (!riskTrend) {
+  if (isLoading) {
+    return <Shimmer height={330} />;
+  } else if (!riskTrend) {
     return null;
   }
 

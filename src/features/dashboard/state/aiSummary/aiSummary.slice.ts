@@ -32,10 +32,14 @@ const aiSummarySlice = createSlice({
   selectors: {
     selectAiSummary: (state) => state.data,
     selectAiSummaryDataState: (state) => state.dataState,
+    selectAiSummaryIsLoading: (state) => state.dataState === "pending",
   },
 });
 
-export const { selectAiSummary, selectAiSummaryDataState } =
-  aiSummarySlice.selectors;
+export const {
+  selectAiSummary,
+  selectAiSummaryDataState,
+  selectAiSummaryIsLoading,
+} = aiSummarySlice.selectors;
 
 export default aiSummarySlice.reducer;

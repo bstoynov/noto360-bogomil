@@ -32,10 +32,14 @@ const riskTrendSlice = createSlice({
   selectors: {
     selectRiskTrend: (state) => state.data,
     selectRiskTrendDataState: (state) => state.dataState,
+    selectRiskTrendIsLoading: (state) => state.dataState === "pending",
   },
 });
 
-export const { selectRiskTrend, selectRiskTrendDataState } =
-  riskTrendSlice.selectors;
+export const {
+  selectRiskTrend,
+  selectRiskTrendDataState,
+  selectRiskTrendIsLoading,
+} = riskTrendSlice.selectors;
 
 export default riskTrendSlice.reducer;

@@ -1,6 +1,10 @@
-import { fetchAiSummary, selectAiSummary } from "@features/dashboard/state";
+import {
+  fetchAiSummary,
+  selectAiSummary,
+  selectAiSummaryIsLoading,
+} from "@features/dashboard/state";
 import { useDispatch, useSelector } from "@store";
-import { Card, Button, Chip, Hint, Icon } from "@ui";
+import { Card, Button, Chip, Hint, Icon, Shimmer } from "@ui";
 import { useEffect } from "react";
 import MetaRow from "../MetaRow/MetaRow";
 import styles from "./AISummary.module.scss";
@@ -8,13 +12,15 @@ import styles from "./AISummary.module.scss";
 function AISummary() {
   const dispatch = useDispatch();
   const aiSummary = useSelector(selectAiSummary);
+  const isLoading = useSelector(selectAiSummaryIsLoading);
 
   useEffect(() => {
     dispatch(fetchAiSummary());
   }, [dispatch]);
 
-  // TODO: handle skeleton
-  if (!aiSummary) {
+  if (isLoading) {
+    return <Shimmer height={314} />;
+  } else if (!aiSummary) {
     return null;
   }
 

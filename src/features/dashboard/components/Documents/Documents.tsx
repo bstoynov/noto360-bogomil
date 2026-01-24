@@ -1,6 +1,10 @@
-import { fetchDocuments, selectDocuments } from "@features/dashboard/state";
+import {
+  fetchDocuments,
+  selectDocuments,
+  selectDocumentsIsLoading,
+} from "@features/dashboard/state";
 import { useDispatch, useSelector } from "@store";
-import { Card, Icon, Link } from "@ui";
+import { Card, Icon, Link, Shimmer } from "@ui";
 import { useEffect } from "react";
 import styles from "./Documents.module.scss";
 import DocumentInfo from "../DocumentInfo/DocumentInfo";
@@ -8,13 +12,15 @@ import DocumentInfo from "../DocumentInfo/DocumentInfo";
 function Documents() {
   const dispatch = useDispatch();
   const documents = useSelector(selectDocuments);
+  const isLoading = useSelector(selectDocumentsIsLoading);
 
   useEffect(() => {
     dispatch(fetchDocuments());
   }, [dispatch]);
 
-  // TODO: handle skeleton
-  if (!documents) {
+  if (isLoading) {
+    return <Shimmer height={272} />;
+  } else if (!documents) {
     return null;
   }
 

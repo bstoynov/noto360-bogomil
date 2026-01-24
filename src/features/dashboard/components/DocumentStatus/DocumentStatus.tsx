@@ -1,6 +1,9 @@
-import { selectPrimaryDocument } from "@features/dashboard/state";
+import {
+  selectPrimaryDocument,
+  selectDocumentsIsLoading,
+} from "@features/dashboard/state";
 import { useSelector } from "@store";
-import { Card, Icon } from "@ui";
+import { Card, Icon, Shimmer } from "@ui";
 import MetaRow from "../MetaRow/MetaRow";
 import DocumentInfo from "../DocumentInfo/DocumentInfo";
 import styles from "./DocumentStatus.module.scss";
@@ -9,9 +12,11 @@ import { formatTimestamp } from "@utils";
 
 function DocumentStatus() {
   const document = useSelector(selectPrimaryDocument);
+  const isLoading = useSelector(selectDocumentsIsLoading);
 
-  // TODO: handle loading skeleton
-  if (!document) {
+  if (isLoading) {
+    return <Shimmer height={272} />;
+  } else if (!document) {
     return null;
   }
 
