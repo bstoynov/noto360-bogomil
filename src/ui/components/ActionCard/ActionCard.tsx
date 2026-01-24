@@ -1,6 +1,6 @@
-import Icon from "../Icon/Icon";
 import type { ActionCardProps } from "./ActionCard.types";
 import styles from "./ActionCard.module.scss";
+import Icon from "../Icon/Icon";
 
 function ActionCard({ title, subtitle, children }: ActionCardProps) {
   return (
