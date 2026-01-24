@@ -2,6 +2,7 @@
   padding: $space-100 $space-200;
   border-radius: $radius-full;
   display: flex;
+  justify-content: center;
   align-items: center;
   border-width: 1px;
   border-style: solid;
@@ -26,6 +27,22 @@
   border-color: $text-ruby;
 }
 
+.Citrine {
+  background: $bg-citrine;
+  color: $text-citrine;
+  border-color: $text-citrine;
+}
+
+.Emerald {
+  background: $bg-emerald;
+  color: $text-emerald;
+  border-color: $text-emerald;
+}
+
 .icon {
   height: $space-300;
+}
+
+.noBackground {
+  background: none;
 }

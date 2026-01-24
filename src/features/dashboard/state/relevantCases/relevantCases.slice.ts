@@ -1,6 +1,12 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import {
+  createSlice,
+  createAsyncThunk,
+  createSelector,
+} from "@reduxjs/toolkit";
 import type { RelevantCasesState } from "./relevantCases.types";
+import type { RelevantCasesTableColumnName, SortOrder } from "../../types";
 import { DashboardService } from "../../services";
+import { SORT } from "@features/dashboard/constants";
 
 const initialState: RelevantCasesState = {
   data: undefined,
@@ -31,11 +37,42 @@ const relevantCasesSlice = createSlice({
   },
   selectors: {
     selectRelevantCases: (state) => state.data,
+    selectRelevantCasesLastPrecedentUpdate: (state) =>
+      state.data?.lastPrecedentUpdate,
     selectRelevantCasesDataState: (state) => state.dataState,
   },
 });
 
-export const { selectRelevantCases, selectRelevantCasesDataState } =
-  relevantCasesSlice.selectors;
+export const {
+  selectRelevantCases,
+  selectRelevantCasesDataState,
+  selectRelevantCasesLastPrecedentUpdate,
+} = relevantCasesSlice.selectors;
+
+export const selectRelevantCasesSorted = createSelector(
+  [
+    selectRelevantCases,
+    (_state, sortField: RelevantCasesTableColumnName | null) => sortField,
+    (_state, _sortField, sortOrder: SortOrder) => sortOrder,
+  ],
+  (data, sortField, sortOrder) => {
+    if (!data?.items || !sortField) return data?.items;
+
+    return [...data.items].sort((a, b) => {
+      const aVal = a[sortField];
+      const bVal = b[sortField];
+      const modifier = sortOrder === SORT.Desc ? -1 : 1;
+
+      if (aVal == null) return 1;
+      if (bVal == null) return -1;
+
+      if (typeof aVal === "number" && typeof bVal === "number") {
+        return (aVal - bVal) * modifier;
+      }
+
+      return String(aVal).localeCompare(String(bVal)) * modifier;
+    });
+  },
+);
 
 export default relevantCasesSlice.reducer;

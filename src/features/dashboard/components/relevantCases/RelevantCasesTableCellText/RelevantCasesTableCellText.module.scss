@@ -1,0 +1,8 @@
+.text {
+  @include body-l-med;
+  color: $text-on-light;
+}
+
+.center {
+  text-align: center;
+}

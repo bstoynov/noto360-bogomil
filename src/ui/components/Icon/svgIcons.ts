@@ -17,6 +17,7 @@ import search from "@icons/search.svg";
 import settings from "@icons/settings.svg";
 import users from "@icons/users.svg";
 import warning from "@icons/warning.svg";
+import sortArrows from "@icons/sort-arrows.svg";
 
 export default {
   arrowCircle,
@@ -38,4 +39,5 @@ export default {
   settings,
   users,
   warning,
+  sortArrows,
 };

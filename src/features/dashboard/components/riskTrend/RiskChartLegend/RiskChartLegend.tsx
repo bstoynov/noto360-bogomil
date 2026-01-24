@@ -1,9 +1,9 @@
-import styles from "./RiskChartLegend.module.scss";
-import type { RiskChartLegendProps } from "./RiskChartLegend.types";
 import {
   riskTrendTypeColorMap,
   riskTrendTypeLabelMap,
-} from "../riskTrend.constants";
+} from "@features/dashboard/constants";
+import styles from "./RiskChartLegend.module.scss";
+import type { RiskChartLegendProps } from "./RiskChartLegend.types";
 import { ChipButton } from "@ui";
 
 function RiskChartLegend({ data, onToggle }: RiskChartLegendProps) {

@@ -2,11 +2,11 @@ import { Tooltip as RechartsTooltip } from "recharts";
 import { Tooltip } from "@ui";
 import styles from "./RiskChartTooltip.module.scss";
 import type { RiskChartTooltipProps } from "./RiskChartTooltip.types";
+import { riskChartTooltipSuffixMap } from "./RiskChartTooltip.constants";
 import {
   riskTrendTypeColorMap,
   riskTrendTypeLabelMap,
-} from "../riskTrend.constants";
-import { riskChartTooltipSuffixMap } from "./RiskChartTooltip.constants";
+} from "@features/dashboard/constants";
 
 function RiskChartTooltip({ data }: RiskChartTooltipProps) {
   return (

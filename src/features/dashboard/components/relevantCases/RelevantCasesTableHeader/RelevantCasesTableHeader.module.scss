@@ -1,0 +1,20 @@
+.header {
+  @include bottom-separator-light;
+  height: $space-1000;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  gap: $space-100;
+}
+
+.text {
+  color: $text-on-dark-muted;
+  @include body-s;
+}
+
+.icon {
+  color: $text-on-dark-subtle;
+  height: $space-300;
+}

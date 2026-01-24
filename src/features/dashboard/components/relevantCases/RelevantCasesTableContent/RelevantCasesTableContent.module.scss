@@ -1,0 +1,7 @@
+.row {
+  height: $space-1200;
+
+  &:not(:last-child) {
+    @include bottom-separator-light;
+  }
+}

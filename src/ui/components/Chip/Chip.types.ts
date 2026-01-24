@@ -4,4 +4,5 @@ export type ChipProps = {
   variant: ColorVariant;
   text: string;
   iconName?: IconName;
+  noBackground?: boolean;
 };

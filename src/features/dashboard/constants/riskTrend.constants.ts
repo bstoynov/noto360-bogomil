@@ -1,7 +1,7 @@
 import type {
   RiskTrendTypeColorVariantMap,
   RiskTrendTypeLabelMap,
-} from "./riskTrend.types";
+} from "@features/dashboard/types";
 
 export const riskTrendTypeColorMap: RiskTrendTypeColorVariantMap = {
   DocumentsAnalyzed: "Aqua",
