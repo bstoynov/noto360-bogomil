@@ -1,6 +1,7 @@
 import { Icon } from "@ui";
 import styles from "./MetricItem.module.scss";
 import type { MetricItemProps } from "./MetricItem.types";
+import { RollingNumber } from "@components";
 
 function MetricItem({ value, delta, name, suffixText, unit }: MetricItemProps) {
   return (
@@ -8,10 +9,12 @@ function MetricItem({ value, delta, name, suffixText, unit }: MetricItemProps) {
       <span className={styles.name}>{name}</span>
 
       <div className={styles.footer}>
-        <span className={styles.value}>
-          {value}
-          {unit}
-        </span>
+        <RollingNumber
+          value={value}
+          delta={delta}
+          unit={unit}
+          className={styles.value}
+        />
         <span
           className={`${styles.update} ${delta >= 0 ? styles.positive : styles.negative}`}
         >

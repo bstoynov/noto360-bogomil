@@ -14,23 +14,23 @@ export default async function handler(req, res) {
   res.status(200).json([
     {
       "type": "PagesAnalized",
-      "value": 47,
-      "delta": 6
+      "value": 96,
+      "delta": 23
     },
     {
       "type": "RelevantPrecedents",
-      "value": 23,
-      "delta": -3
+      "value": 87,
+      "delta": -16
     },
     {
       "type": "IdentifiedRisks",
-      "value": 12,
-      "delta": -2
+      "value": 68,
+      "delta": -13
     },
     {
       "type": "AIConfidence",
       "value": 94,
-      "delta": 5
+      "delta": 24
     }
   ]);
 }

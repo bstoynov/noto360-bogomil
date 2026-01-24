@@ -30,6 +30,8 @@ export default defineConfig({
       "@utils": path.resolve(__dirname, "./src/utils"),
       "@icons": path.resolve(__dirname, "./public/icons"),
       "@router": path.resolve(__dirname, "./src/router"),
+      "@hooks": path.resolve(__dirname, "./src/hooks"),
+      "@components": path.resolve(__dirname, "./src/components"),
     },
   },
 });
