@@ -17,13 +17,17 @@ function RiskChartTooltip({ data }: RiskChartTooltipProps) {
 
         const tooltips = data
           .filter((item) => item.visible)
-          .map((item, i) => ({
-            ...item,
-            label: riskTrendTypeLabelMap[item.type],
-            suffix: riskChartTooltipSuffixMap[item.type],
-            variant: riskTrendTypeColorMap[item.type],
-            value: payload[i].value,
-          }));
+          .map((item) => {
+            const payloadItem = payload.find((p) => p.dataKey === item.type);
+
+            return {
+              ...item,
+              label: riskTrendTypeLabelMap[item.type],
+              suffix: riskChartTooltipSuffixMap[item.type],
+              variant: riskTrendTypeColorMap[item.type],
+              value: payloadItem?.value,
+            };
+          });
 
         return (
           <span className={styles.tooltip}>

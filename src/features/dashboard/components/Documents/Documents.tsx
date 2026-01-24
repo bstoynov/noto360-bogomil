@@ -1,6 +1,6 @@
 import { fetchDocuments, selectDocuments } from "@features/dashboard/state";
 import { useDispatch, useSelector } from "@store";
-import { ActionCard, Link } from "@ui";
+import { Card, Icon, Link } from "@ui";
 import { useEffect } from "react";
 import styles from "./Documents.module.scss";
 import DocumentInfo from "../DocumentInfo/DocumentInfo";
@@ -19,7 +19,11 @@ function Documents() {
   }
 
   return (
-    <ActionCard title="Documents" subtitle="Last AI Documents Reviews">
+    <Card
+      title="Documents"
+      subtitle="Last AI Documents Reviews"
+      actionComponent={<Icon name="dotsHorizontal" className={styles.dots} />}
+    >
       <div className={styles.content}>
         <ul className={styles.list}>
           {documents.map((d) => (
@@ -33,7 +37,7 @@ function Documents() {
         </ul>
         <Link text="Show all" iconName="chevronDown" />
       </div>
-    </ActionCard>
+    </Card>
   );
 }
 

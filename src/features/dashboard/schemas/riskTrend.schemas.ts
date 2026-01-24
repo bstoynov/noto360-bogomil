@@ -1,8 +1,8 @@
 import z from "zod";
 
 export const RiskTrendTypeSchema = z.enum([
-  "RiskExposure",
   "DocumentsAnalyzed",
+  "RiskExposure",
 ]);
 
 export const RiskTrendResponseSchema = z.object({

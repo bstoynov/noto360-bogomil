@@ -1,5 +1,15 @@
 .chart {
+  padding-top: $space-200;
+  margin-left: -$space-400;
+  margin-right: -$space-400;
+
   :global {
+
+    // hide outline on click
+    .recharts-wrapper *:focus:not(:focus-visible) {
+      outline: none !important;
+    }
+
     .recharts-surface {
       overflow: visible;
     }

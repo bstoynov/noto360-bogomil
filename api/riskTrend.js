@@ -12,8 +12,8 @@ export default function handler(req, res) {
     yEnd: 40,
     dataSize: 12,
     data: {
-      RiskExposure: [20, 10, 25, 15, 22, 23, 25, 25, 10, 20, 12, 10],
-      DocumentsAnalyzed: [15, 22, 33, 25, 32, 35, 40, 28, 33, 34, 27, 37],
+      RiskExposure: [12, 15, 18, 25, 30, 24, 18, 16, 20, 28, 22, 15],
+      DocumentsAnalyzed: [25, 28, 32, 28, 26, 30, 34, 32, 28, 25, 30, 35],
     },
   });
 }

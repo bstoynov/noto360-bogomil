@@ -1,6 +1,6 @@
 import { selectPrimaryDocument } from "@features/dashboard/state";
 import { useSelector } from "@store";
-import { ActionCard } from "@ui";
+import { Card, Icon } from "@ui";
 import MetaRow from "../MetaRow/MetaRow";
 import DocumentInfo from "../DocumentInfo/DocumentInfo";
 import styles from "./DocumentStatus.module.scss";
@@ -27,7 +27,10 @@ function DocumentStatus() {
   } = document;
 
   return (
-    <ActionCard title="Document Status">
+    <Card
+      title="Document Status"
+      actionComponent={<Icon name="dotsHorizontal" className={styles.dots} />}
+    >
       <div>
         <DocumentInfo name={name} size={size} format={format} />
         <div>
@@ -43,7 +46,7 @@ function DocumentStatus() {
         <DocumentReviewProgress reviewProgress={reviewProgress} />
         <div className={styles.stage}>Stage: {stage}</div>
       </div>
-    </ActionCard>
+    </Card>
   );
 }
 

@@ -1,6 +1,6 @@
 import { fetchAiSummary, selectAiSummary } from "@features/dashboard/state";
 import { useDispatch, useSelector } from "@store";
-import { ActionCard, Button, Chip, Hint } from "@ui";
+import { Card, Button, Chip, Hint, Icon } from "@ui";
 import { useEffect } from "react";
 import MetaRow from "../MetaRow/MetaRow";
 import styles from "./AISummary.module.scss";
@@ -28,7 +28,10 @@ function AISummary() {
   } = aiSummary;
 
   return (
-    <ActionCard title="AI Summary">
+    <Card
+      title="AI Summary"
+      actionComponent={<Icon name="dotsHorizontal" className={styles.dots} />}
+    >
       <div className={styles.content}>
         <div>
           <MetaRow
@@ -49,7 +52,7 @@ function AISummary() {
           <Button variant="primary">See Suggested Rewrite</Button>
         )}
       </div>
-    </ActionCard>
+    </Card>
   );
 }
 

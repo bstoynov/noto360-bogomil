@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { CartesianGrid, LineChart, XAxis, YAxis } from "recharts";
-import { ActionCard } from "@ui";
+import { Card } from "@ui";
 import styles from "./RiskTrendChart.module.scss";
 import RiskChartTooltip from "../RiskChartTooltip/RiskChartTooltip";
 import { useDispatch, useSelector } from "@store";
@@ -40,8 +40,9 @@ function RiskTrendChart() {
   }
 
   return (
-    <ActionCard title="AI Risk Trend">
-      <div className={styles.chart}>
+    <Card
+      title="AI Risk Trend"
+      actionComponent={
         <RiskChartLegend
           data={linesData}
           onToggle={(type) => {
@@ -51,6 +52,9 @@ function RiskTrendChart() {
             }));
           }}
         />
+      }
+    >
+      <div className={styles.chart}>
         <LineChart
           className={styles.chart}
           responsive
@@ -58,9 +62,9 @@ function RiskTrendChart() {
           height={250}
           data={chartData}
         >
-          <XAxis dy={16} dataKey="month" axisLine={false} tickLine={false} />
+          <XAxis dy={12} dataKey="month" axisLine={false} tickLine={false} />
           <YAxis
-            dx={-16}
+            dx={-8}
             domain={[riskTrend.yStart, riskTrend.yEnd]}
             axisLine={false}
             tickLine={false}
@@ -70,7 +74,7 @@ function RiskTrendChart() {
           <RiskChartTooltip data={linesData} />
         </LineChart>
       </div>
-    </ActionCard>
+    </Card>
   );
 }
 
