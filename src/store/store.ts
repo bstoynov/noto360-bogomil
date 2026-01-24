@@ -4,6 +4,7 @@ import {
   documentsReducer,
   aiSummaryReducer,
   riskTrendReducer,
+  relevantCasesReducer,
 } from "@features/dashboard/state";
 
 export default configureStore({
@@ -12,5 +13,6 @@ export default configureStore({
     documents: documentsReducer,
     aiSummary: aiSummaryReducer,
     riskTrend: riskTrendReducer,
+    relevantCases: relevantCasesReducer,
   },
 });

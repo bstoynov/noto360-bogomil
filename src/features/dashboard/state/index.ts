@@ -9,3 +9,6 @@ export * from "./aiSummary/aiSummary.slice";
 
 export { default as riskTrendReducer } from "./riskTrend/riskTrend.slice";
 export * from "./riskTrend/riskTrend.slice";
+
+export { default as relevantCasesReducer } from "./relevantCases/relevantCases.slice";
+export * from "./relevantCases/relevantCases.slice";
