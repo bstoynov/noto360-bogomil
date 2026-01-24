@@ -21,8 +21,10 @@ function RiskTrendChart() {
   const isLoading = useSelector(selectRiskTrendIsLoading);
 
   useEffect(() => {
-    dispatch(fetchRiskTrend());
-  }, [dispatch]);
+    if (!riskTrend) {
+      dispatch(fetchRiskTrend());
+    }
+  }, [dispatch, riskTrend]);
 
   const chartData = useMemo(
     () => riskTrend && parseLineChartData(riskTrend),

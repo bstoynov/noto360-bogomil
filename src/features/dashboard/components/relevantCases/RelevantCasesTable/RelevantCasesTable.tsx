@@ -16,8 +16,10 @@ function RelevantCasesTable() {
   const isLoading = useSelector(selectRelevantCasesIsLoading);
 
   useEffect(() => {
-    dispatch(fetchRelevantCases());
-  }, [dispatch]);
+    if (!relevantCases) {
+      dispatch(fetchRelevantCases());
+    }
+  }, [dispatch, relevantCases]);
 
   if (isLoading) {
     return <Shimmer height={394} />;

@@ -15,8 +15,10 @@ function Documents() {
   const isLoading = useSelector(selectDocumentsIsLoading);
 
   useEffect(() => {
-    dispatch(fetchDocuments());
-  }, [dispatch]);
+    if (!documents) {
+      dispatch(fetchDocuments());
+    }
+  }, [dispatch, documents]);
 
   if (isLoading) {
     return <Shimmer height={272} />;

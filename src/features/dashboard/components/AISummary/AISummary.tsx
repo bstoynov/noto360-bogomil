@@ -15,8 +15,10 @@ function AISummary() {
   const isLoading = useSelector(selectAiSummaryIsLoading);
 
   useEffect(() => {
-    dispatch(fetchAiSummary());
-  }, [dispatch]);
+    if (!aiSummary) {
+      dispatch(fetchAiSummary());
+    }
+  }, [dispatch, aiSummary]);
 
   if (isLoading) {
     return <Shimmer height={314} />;

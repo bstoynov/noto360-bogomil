@@ -17,8 +17,10 @@ function MetricList() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMetrics());
-  }, [dispatch]);
+    if (!metrics) {
+      dispatch(fetchMetrics());
+    }
+  }, [dispatch, metrics]);
 
   if (isLoading) {
     return (
