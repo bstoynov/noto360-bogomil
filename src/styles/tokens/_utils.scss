@@ -1,14 +1,23 @@
 @use 'colors' as *;
 
-@mixin bottom-separator {
+@mixin bottom-separator($color) {
   position: relative;
 
   &::after {
     content: '';
     position: absolute;
-    width: 100%;
+    left: 0;
+    right: 0;
     height: 1px;
-    background-color: $border-muted;
+    background-color: $color;
     bottom: 0;
   }
+}
+
+@mixin bottom-separator-light {
+  @include bottom-separator($border-on-light-muted);
+}
+
+@mixin bottom-separator-dark {
+  @include bottom-separator($border-on-dark-muted);
 }

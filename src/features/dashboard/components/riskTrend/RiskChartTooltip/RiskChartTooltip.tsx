@@ -9,7 +9,6 @@ import {
 import { riskChartTooltipSuffixMap } from "./RiskChartTooltip.constants";
 
 function RiskChartTooltip({ data }: RiskChartTooltipProps) {
-  // TODO: wrong placement
   return (
     <RechartsTooltip
       content={({ payload }) => {
@@ -33,6 +32,7 @@ function RiskChartTooltip({ data }: RiskChartTooltipProps) {
           <span className={styles.tooltip}>
             {tooltips.map(({ label, suffix, value, variant }) => (
               <Tooltip
+                key={variant}
                 variant={variant}
                 text={`${label}: ${value}${suffix || ""}`}
               />

@@ -20,6 +20,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      "@layout": path.resolve(__dirname, "./src/layout"),
       "@features": path.resolve(__dirname, "./src/features"),
       "@store": path.resolve(__dirname, "./src/store"),
       "@api": path.resolve(__dirname, "./src/api"),
@@ -28,6 +29,7 @@ export default defineConfig({
       "@ui": path.resolve(__dirname, "./src/ui"),
       "@utils": path.resolve(__dirname, "./src/utils"),
       "@icons": path.resolve(__dirname, "./public/icons"),
+      "@router": path.resolve(__dirname, "./src/router"),
     },
   },
 });

@@ -26,13 +26,8 @@ function Documents() {
     >
       <div className={styles.content}>
         <ul className={styles.list}>
-          {documents.map((d) => (
-            <DocumentInfo
-              key={d.name}
-              name={d.name}
-              size={d.size}
-              format={d.format}
-            />
+          {documents.map(({ name, size, format }) => (
+            <DocumentInfo key={name} name={name} size={size} format={format} />
           ))}
         </ul>
         <Link text="Show all" iconName="chevronDown" />

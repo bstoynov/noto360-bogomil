@@ -20,8 +20,12 @@ function MetricList() {
 
   return (
     <ul className={styles.list}>
-      {metrics.map((m) => (
-        <MetricItem key={m.type} {...m} {...metricItemMetaDataMap[m.type]} />
+      {metrics.map((item) => (
+        <MetricItem
+          key={item.type}
+          {...item}
+          {...metricItemMetaDataMap[item.type]}
+        />
       ))}
     </ul>
   );

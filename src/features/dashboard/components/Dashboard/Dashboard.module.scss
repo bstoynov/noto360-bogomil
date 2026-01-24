@@ -1,15 +1,14 @@
 .dashboard {
-  background: $bg-light-subtle;
-  padding: $space-600 $space-500;
-  // TODO: this should be a grid
   display: flex;
-  gap: $space-600;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
   gap: $space-500;
+  padding: $space-700 $space-500;
+  height: 100%;
+
+  &>* {
+    display: flex;
+    flex-direction: column;
+    gap: $space-500;
+  }
 }
 
 .left {
@@ -17,5 +16,5 @@
 }
 
 .right {
-  flex: 3;
+  flex: 2;
 }
