@@ -1,26 +1,24 @@
 import { animate, useMotionValue, useTransform } from "motion/react";
 import { useEffect } from "react";
 import type { UseAnimateNumberValueParams } from "./useAnimateNumberValue.types";
-import { EXTREME_EASE_OUT } from "@constants";
+import { easingMap } from "@constants";
 
 const useAnimateNumberValue = ({
   start,
   end,
   transformer,
+  ease,
 }: UseAnimateNumberValueParams) => {
   const rollingNum = useMotionValue(start);
 
   const result = useTransform(rollingNum, transformer);
+  const easeConfig = easingMap[ease];
 
   useEffect(() => {
-    const animation = animate(rollingNum, end, {
-      delay: EXTREME_EASE_OUT.delay,
-      duration: EXTREME_EASE_OUT.duration,
-      ease: EXTREME_EASE_OUT.easing,
-    });
+    const animation = animate(rollingNum, end, easeConfig);
 
     return () => animation.stop();
-  }, [rollingNum, end]);
+  }, [rollingNum, end, easeConfig]);
 
   return result;
 };

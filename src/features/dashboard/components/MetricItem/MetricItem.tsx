@@ -14,6 +14,7 @@ function MetricItem({ value, delta, name, suffixText, unit }: MetricItemProps) {
           delta={delta}
           unit={unit}
           className={styles.value}
+          ease="long"
         />
         <span
           className={`${styles.update} ${delta >= 0 ? styles.positive : styles.negative}`}

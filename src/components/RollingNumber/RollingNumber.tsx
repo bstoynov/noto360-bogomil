@@ -7,11 +7,13 @@ function RollingNumber({
   delta,
   unit = "",
   className,
+  ease,
 }: RollingNumberProps) {
   const rollingNumber = useAnimateNumberValue({
     start: value - delta,
     end: value,
     transformer: (animatedValue) => animatedValue.toFixed(0),
+    ease,
   });
 
   return (
