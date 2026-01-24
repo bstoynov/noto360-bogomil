@@ -1,7 +1,7 @@
-import type { ColorVariant, IconProps } from "@ui";
+import type { ColorVariant, IconName } from "@ui";
 
 export type ChipProps = {
   variant: ColorVariant;
   text: string;
-  iconName?: IconProps["name"];
+  iconName?: IconName;
 };

@@ -35,7 +35,7 @@ function AISummary() {
             label="Risk Zone"
             customValue={
               <Chip
-                variant="ruby"
+                variant="Ruby"
                 text={`${riskSeverity} ${riskScore}`}
                 iconName="warning"
               />

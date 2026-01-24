@@ -1,5 +1,5 @@
 export type * from "./types/ui.types";
-export type { IconProps } from "./components/Icon/Icon.types";
+export type { IconName } from "./components/Icon/Icon.types";
 
 export { default as Icon } from "./components/Icon/Icon";
 export { default as ActionCard } from "./components/ActionCard/ActionCard";
