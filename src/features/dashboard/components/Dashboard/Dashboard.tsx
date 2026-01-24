@@ -1,3 +1,4 @@
+import RiskTrendChart from "../riskTrend/RiskTrendChart/RiskTrendChart";
 import AISummary from "../AISummary/AISummary";
 import Documents from "../Documents/Documents";
 import DocumentStatus from "../DocumentStatus/DocumentStatus";
@@ -14,6 +15,7 @@ function Dashboard() {
       </div>
       <div className={`${styles.column} ${styles.right}`}>
         <MetricList />
+        <RiskTrendChart />
       </div>
     </div>
   );

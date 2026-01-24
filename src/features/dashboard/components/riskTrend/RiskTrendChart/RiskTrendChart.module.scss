@@ -1,0 +1,22 @@
+.chart {
+  :global {
+    .recharts-surface {
+      overflow: visible;
+    }
+
+    .recharts-yAxis-tick-labels .recharts-cartesian-axis-tick-value {
+      @include body-s;
+      fill: $text-on-light-muted;
+    }
+
+    .recharts-xAxis-tick-labels .recharts-cartesian-axis-tick-value {
+      @include body-s;
+      fill: $text-on-light-subtle;
+    }
+  }
+}
+
+.cartesianGrid {
+  stroke: $text-on-dark-muted;
+  stroke-dasharray: 5 5;
+}

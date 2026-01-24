@@ -1,0 +1,43 @@
+import { Tooltip as RechartsTooltip } from "recharts";
+import { Tooltip } from "@ui";
+import styles from "./RiskChartTooltip.module.scss";
+import type { RiskChartTooltipProps } from "./RiskChartTooltip.types";
+import {
+  riskTrendTypeColorMap,
+  riskTrendTypeLabelMap,
+} from "../riskTrend.constants";
+import { riskChartTooltipSuffixMap } from "./RiskChartTooltip.constants";
+
+function RiskChartTooltip({ data }: RiskChartTooltipProps) {
+  // TODO: wrong placement
+  return (
+    <RechartsTooltip
+      content={({ payload }) => {
+        if (!payload.length) return null;
+
+        const tooltips = data
+          .filter((item) => item.visible)
+          .map((item, i) => ({
+            ...item,
+            label: riskTrendTypeLabelMap[item.type],
+            suffix: riskChartTooltipSuffixMap[item.type],
+            variant: riskTrendTypeColorMap[item.type],
+            value: payload[i].value,
+          }));
+
+        return (
+          <span className={styles.tooltip}>
+            {tooltips.map(({ label, suffix, value, variant }) => (
+              <Tooltip
+                variant={variant}
+                text={`${label}: ${value}${suffix || ""}`}
+              />
+            ))}
+          </span>
+        );
+      }}
+    />
+  );
+}
+
+export default RiskChartTooltip;

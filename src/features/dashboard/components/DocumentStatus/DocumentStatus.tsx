@@ -5,6 +5,7 @@ import MetaRow from "../MetaRow/MetaRow";
 import DocumentInfo from "../DocumentInfo/DocumentInfo";
 import styles from "./DocumentStatus.module.scss";
 import DocumentReviewProgress from "../DocumentReviewProgress/DocumentReviewProgress";
+import { formatTimestamp } from "@utils";
 
 function DocumentStatus() {
   const document = useSelector(selectPrimaryDocument);
@@ -29,9 +30,11 @@ function DocumentStatus() {
     <ActionCard title="Document Status">
       <div>
         <DocumentInfo name={name} size={size} format={format} />
-        {/* TODO: convert using dayjs */}
         <div>
-          <MetaRow label="Analyzed" textValue={analyzedTimestamp} />
+          <MetaRow
+            label="Analyzed"
+            textValue={formatTimestamp(analyzedTimestamp)}
+          />
           <MetaRow
             label="Last Edited"
             textValue={`${lastEditAuthorName}, ${lastEditAuthorTitle}`}
