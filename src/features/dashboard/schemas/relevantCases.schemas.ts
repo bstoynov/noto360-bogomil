@@ -16,3 +16,5 @@ export const RelevantCasesResponseSchema = z.object({
   items: z.array(RelevantCaseItemSchema),
   lastPrecedentUpdate: z.iso.datetime(),
 });
+
+export const SortOrderSchema = z.enum(["asc", "desc"]);

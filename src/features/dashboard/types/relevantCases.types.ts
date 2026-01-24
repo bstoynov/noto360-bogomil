@@ -4,6 +4,7 @@ import type {
   RelevantCaseOutcomeSchema,
   RelevantCaseItemSchema,
   RelevantCasesResponseSchema,
+  SortOrderSchema,
 } from "../schemas";
 
 export type RelevantCaseJurisdiction = z.infer<
@@ -12,6 +13,7 @@ export type RelevantCaseJurisdiction = z.infer<
 export type RelevantCaseOutcome = z.infer<typeof RelevantCaseOutcomeSchema>;
 export type RelevantCaseItem = z.infer<typeof RelevantCaseItemSchema>;
 export type RelevantCasesResponse = z.infer<typeof RelevantCasesResponseSchema>;
+export type SortOrder = z.infer<typeof SortOrderSchema>;
 
 export type RelevantCasesTableColumnName = keyof RelevantCaseItem;
 
@@ -20,5 +22,3 @@ export type RelevantCaseHeaderConfigItem = {
   headerName: string;
   sortable: boolean;
 };
-
-export type SortOrder = "asc" | "desc";

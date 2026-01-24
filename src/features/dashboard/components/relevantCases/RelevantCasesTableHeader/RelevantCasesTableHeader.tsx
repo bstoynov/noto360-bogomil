@@ -1,18 +1,19 @@
 import { Icon } from "@ui";
 import styles from "./RelevantCasesTableHeader.module.scss";
 import { useSearchParams } from "react-router-dom";
-import type {
-  RelevantCasesTableColumnName,
-  SortOrder,
-} from "@features/dashboard/types";
-import { relevantCasesHeaderConfig, SORT } from "@features/dashboard/constants";
+import type { RelevantCasesTableColumnName } from "@features/dashboard/types";
+import { relevantCasesHeaderConfig } from "@features/dashboard/constants";
+import { SortOrderSchema } from "@features/dashboard/schemas";
 
 function RelevantCasesTableHeader() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const onSort = (field: RelevantCasesTableColumnName) => {
-    const currentValue = searchParams.get(field) as SortOrder;
-    const newValue = currentValue === SORT.Asc ? SORT.Desc : SORT.Asc;
+    const currentValue = searchParams.get(field);
+    const newValue =
+      currentValue === SortOrderSchema.enum.asc
+        ? SortOrderSchema.enum.desc
+        : SortOrderSchema.enum.asc;
     setSearchParams({ [field]: newValue }, { replace: true });
   };
 

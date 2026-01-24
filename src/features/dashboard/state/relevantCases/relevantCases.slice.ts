@@ -6,7 +6,7 @@ import {
 import type { RelevantCasesState } from "./relevantCases.types";
 import type { RelevantCasesTableColumnName, SortOrder } from "../../types";
 import { DashboardService } from "../../services";
-import { SORT } from "@features/dashboard/constants";
+import { SortOrderSchema } from "@features/dashboard/schemas";
 
 const initialState: RelevantCasesState = {
   data: undefined,
@@ -61,7 +61,7 @@ export const selectRelevantCasesSorted = createSelector(
     return [...data.items].sort((a, b) => {
       const aVal = a[sortField];
       const bVal = b[sortField];
-      const modifier = sortOrder === SORT.Desc ? -1 : 1;
+      const modifier = sortOrder === SortOrderSchema.enum.desc ? -1 : 1;
 
       if (aVal == null) return 1;
       if (bVal == null) return -1;

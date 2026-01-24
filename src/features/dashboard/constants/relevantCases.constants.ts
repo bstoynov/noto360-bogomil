@@ -32,8 +32,3 @@ export const relevantCasesHeaderConfig: RelevantCaseHeaderConfigItem[] = [
     sortable: false,
   },
 ];
-
-export const SORT = {
-  Asc: "asc",
-  Desc: "desc",
-} as const;
