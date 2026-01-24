@@ -27,7 +27,10 @@
 
 .value {
   @include heading-xl;
+  font-family: $font-mono;
   color: $text-on-light;
+  display: inline-flex;
+  gap: $space-100;
 }
 
 .update {
