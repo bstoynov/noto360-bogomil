@@ -14,8 +14,34 @@
 
 .left {
   flex: 1;
+
 }
 
 .right {
   flex: 2;
+}
+
+@include below-xl {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    flex: initial;
+  }
+
+  .left {
+    flex-direction: row;
+
+    &>* {
+      width: 100%;
+    }
+  }
+}
+
+@include below-lg {
+  .left {
+    flex-direction: column;
+  }
 }
