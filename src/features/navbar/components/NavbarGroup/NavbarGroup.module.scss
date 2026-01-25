@@ -9,7 +9,6 @@
 .name {
   @include body-m;
   text-transform: uppercase;
-  // TODO: make colors match
   color: $text-on-dark-subtle;
   padding-left: $space-300;
   padding-bottom: $space-400;

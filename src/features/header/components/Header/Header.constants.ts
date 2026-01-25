@@ -1,2 +1,2 @@
 export const userImageUrl =
-  "https://avatars.githubusercontent.com/u/179385380?v=4";
+  "https://qczmmrnhgilhwbwl.public.blob.vercel-storage.com/noto360-bogomil-user";
