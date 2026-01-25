@@ -1,17 +1,15 @@
 .header {
   background: $bg-light;
-  padding: $space-400 $space-600;
+  padding: $space-400 0;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid $border-on-light-muted;
 }
 
 .container {
-  width: 100%;
-  max-width: $container-max-width;
+  @include cap-max-width;
   display: flex;
   align-items: center;
-  padding: 0 $space-500;
   gap: $space-500;
 }
 
@@ -20,7 +18,7 @@
   color: $text-on-light;
   width: 100%;
 
-  @include below-md {
+  @include below-lg {
     @include heading-m;
   }
 }

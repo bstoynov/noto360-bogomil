@@ -21,7 +21,7 @@ function Documents() {
   }, [dispatch, documents]);
 
   if (isLoading) {
-    return <Shimmer height={272} />;
+    return <Shimmer className={styles.shimmer} />;
   } else if (!documents) {
     return null;
   }

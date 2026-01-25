@@ -1,9 +1,9 @@
 .dashboard {
   display: flex;
   gap: $space-500;
-  padding: $space-700 $space-500;
   height: 100%;
   width: 100%;
+  padding: $space-700 0;
 
   &>* {
     display: flex;
@@ -32,16 +32,14 @@
   }
 
   .left {
-    flex-direction: row;
-
-    &>* {
-      width: 100%;
-    }
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 @include below-lg {
   .left {
+    display: flex;
     flex-direction: column;
   }
 }

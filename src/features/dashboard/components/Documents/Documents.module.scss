@@ -1,7 +1,17 @@
-.content {}
-
 .list {
   display: flex;
   flex-direction: column;
   gap: $space-200;
+}
+
+.shimmer {
+  height: 272px;
+
+  @include below-xl {
+    height: 314px;
+  }
+
+  @include below-lg {
+    height: 272px;
+  }
 }

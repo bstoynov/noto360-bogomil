@@ -3,3 +3,11 @@
   flex-direction: column;
   gap: $space-400;
 }
+
+.shimmer {
+  height: 314px;
+
+  @include below-lg {
+    height: 298px;
+  }
+}

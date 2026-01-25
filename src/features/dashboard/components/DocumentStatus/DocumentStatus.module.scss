@@ -6,3 +6,15 @@
   border-radius: $radius-full;
   justify-self: flex-start;
 }
+
+.shimmer {
+  height: 272px;
+
+  @include below-xl {
+    height: 314px;
+  }
+
+  @include below-lg {
+    height: 272px;
+  }
+}

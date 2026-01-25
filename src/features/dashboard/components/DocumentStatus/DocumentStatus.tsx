@@ -15,7 +15,7 @@ function DocumentStatus() {
   const isLoading = useSelector(selectDocumentsIsLoading);
 
   if (isLoading) {
-    return <Shimmer height={272} />;
+    return <Shimmer className={styles.shimmer} />;
   } else if (!document) {
     return null;
   }

@@ -21,7 +21,7 @@ function AISummary() {
   }, [dispatch, aiSummary]);
 
   if (isLoading) {
-    return <Shimmer height={314} />;
+    return <Shimmer className={styles.shimmer} />;
   } else if (!aiSummary) {
     return null;
   }
