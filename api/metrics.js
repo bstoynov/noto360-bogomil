@@ -19,7 +19,7 @@ export default async function handler(req, res) {
     },
     {
       "type": "RelevantPrecedents",
-      "value": 87,
+      "value": 47,
       "delta": -16
     },
     {
