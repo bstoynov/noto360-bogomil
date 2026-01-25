@@ -1,5 +1,6 @@
 export type * from "./types/ui.types";
 export type { IconName } from "./components/Icon/Icon.types";
+export type { AnimationName } from "./components/AnimationPlayer/AnimationPlayer.types";
 
 export { default as Icon } from "./components/Icon/Icon";
 export { default as Card } from "./components/Card/Card";
@@ -10,3 +11,4 @@ export { default as ChipButton } from "./components/ChipButton/ChipButton";
 export { default as Link } from "./components/Link/Link";
 export { default as Tooltip } from "./components/Tooltip/Tooltip";
 export { default as Shimmer } from "./components/Shimmer/Shimmer";
+export { default as AnimationPlayer } from "./components/AnimationPlayer/AnimationPlayer";

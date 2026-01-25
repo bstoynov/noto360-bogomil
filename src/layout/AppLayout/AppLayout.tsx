@@ -5,9 +5,9 @@ import styles from "./AppLayout.module.scss";
 function AppLayout() {
   return (
     <div className={styles.layout}>
-      <div className={styles.side}>
+      <aside className={styles.side}>
         <Navbar />
-      </div>
+      </aside>
       <main className={styles.main}>
         <Outlet />
       </main>
