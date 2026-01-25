@@ -2,8 +2,9 @@ import { navbarConfig } from "@features/navbar/constants";
 import NavbarGroup from "../NavbarGroup/NavbarGroup";
 import styles from "./Navbar.module.scss";
 import { logoImageUrl } from "./Navbar.constants";
+import type { NavbarProps } from "./Navbar.types";
 
-function Navbar() {
+function Navbar({ onNavigation }: NavbarProps) {
   return (
     <nav className={styles.nav}>
       <img
@@ -14,7 +15,11 @@ function Navbar() {
       />
       <ul>
         {navbarConfig.map((item) => (
-          <NavbarGroup key={item.groupName} {...item} />
+          <NavbarGroup
+            key={item.groupName}
+            onNavigation={onNavigation}
+            {...item}
+          />
         ))}
       </ul>
     </nav>

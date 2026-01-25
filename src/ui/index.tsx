@@ -12,3 +12,5 @@ export { default as Link } from "./components/Link/Link";
 export { default as Tooltip } from "./components/Tooltip/Tooltip";
 export { default as Shimmer } from "./components/Shimmer/Shimmer";
 export { default as AnimationPlayer } from "./components/AnimationPlayer/AnimationPlayer";
+export { default as Modal } from "./components/Modal/Modal";
+export { default as IconButton } from "./components/IconButton/IconButton";

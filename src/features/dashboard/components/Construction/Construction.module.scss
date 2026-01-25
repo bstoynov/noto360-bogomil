@@ -9,18 +9,31 @@
 }
 
 .title {
-  @include display;
+  @include heading-xl;
+  font-weight: 700;
   color: $text-on-light;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .animation {
-  width: 600px;
+  width: 500px;
 }
 
 .suffix {
   color: $text-on-light-subtle;
+}
+
+@include below-sm {
+  .title {
+    @include heading-l;
+    font-weight: 700;
+  }
+
+  .animation {
+    width: 350px;
+  }
 }

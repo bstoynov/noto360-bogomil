@@ -21,6 +21,10 @@
   @include below-lg {
     @include heading-m;
   }
+
+  @include below-sm {
+    display: none;
+  }
 }
 
 .icons {

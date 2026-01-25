@@ -20,6 +20,8 @@ import warning from "@icons/warning.svg";
 import sortArrows from "@icons/sort-arrows.svg";
 import plus from "@icons/plus.svg";
 import bell from "@icons/bell.svg";
+import menu from "@icons/menu.svg";
+import close from "@icons/close.svg";
 
 export default {
   arrowCircle,
@@ -44,4 +46,6 @@ export default {
   sortArrows,
   plus,
   bell,
+  menu,
+  close,
 };

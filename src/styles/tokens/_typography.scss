@@ -1,13 +1,6 @@
 $font-sans: 'Inter', sans-serif;
 $font-mono: 'JetBrains Mono', monospace;
 
-@mixin display {
-  font-size: 2.5rem; // 48px
-  font-weight: 700;
-  line-height: 3rem; // 48px
-  letter-spacing: 0em;
-}
-
 @mixin heading-xl {
   font-size: 2.25rem; // 36px
   font-weight: 500;

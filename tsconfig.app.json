@@ -29,6 +29,9 @@
       "@hooks": [
         "src/hooks"
       ],
+      "@styles": [
+        "src/styles"
+      ],
       "@components": [
         "src/components"
       ],

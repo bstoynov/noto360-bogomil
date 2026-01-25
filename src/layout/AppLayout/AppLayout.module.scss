@@ -19,6 +19,10 @@
   flex-direction: column;
   width: 100%;
   margin-left: 250px;
+
+  @include below-md {
+    margin-left: 0;
+  }
 }
 
 .main {

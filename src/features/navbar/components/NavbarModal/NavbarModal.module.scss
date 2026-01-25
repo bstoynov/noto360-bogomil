@@ -1,0 +1,17 @@
+.content {
+  background: $bg-dark;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: $space-500;
+  padding-right: $space-500;
+}
+
+.icon {
+  height: $space-700;
+  color: $bg-light;
+}
