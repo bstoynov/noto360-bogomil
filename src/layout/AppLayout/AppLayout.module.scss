@@ -15,7 +15,6 @@
 }
 
 .headerMain {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -25,4 +24,5 @@
 .main {
   display: flex;
   justify-content: center;
+  height: 100%;
 }

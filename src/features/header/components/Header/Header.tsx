@@ -1,15 +1,15 @@
-import { useCurrentRoute } from "@hooks";
 import { Icon } from "@ui";
 import Search from "../Search/Search";
 import styles from "./Header.module.scss";
+import { useCurrentRouteName } from "@hooks";
 
 function Header() {
-  const currentRoute = useCurrentRoute();
+  const routeName = useCurrentRouteName();
 
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        {currentRoute && <h1 className={styles.title}>{currentRoute.name}</h1>}
+        {routeName && <h1 className={styles.title}>{routeName}</h1>}
         <Search />
         <div className={styles.icons}>
           <Icon name="plus" className={styles.icon} />
