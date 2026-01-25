@@ -1,10 +1,10 @@
 import RiskTrendChart from "../riskTrend/RiskTrendChart/RiskTrendChart";
-import MetricList from "../MetricList/MetricList";
 import styles from "./Dashboard.module.scss";
 import DocumentStatus from "../DocumentStatus/DocumentStatus";
 import AISummary from "../AISummary/AISummary";
 import Documents from "../Documents/Documents";
 import RelevantCasesTable from "../relevantCases/RelevantCasesTable/RelevantCasesTable";
+import MetricList from "../metrics/MetricList/MetricList";
 
 function Dashboard() {
   return (
