@@ -4,15 +4,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: $space-1000;
+  gap: $space-600;
+  padding: $space-400;
 }
 
 .title {
   @include display;
   color: $text-on-light;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .animation {
-  width: 800px;
+  width: 600px;
+}
+
+.suffix {
+  color: $text-on-light-subtle;
 }

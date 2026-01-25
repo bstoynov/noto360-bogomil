@@ -2,6 +2,7 @@ import { Icon } from "@ui";
 import Search from "../Search/Search";
 import styles from "./Header.module.scss";
 import { useCurrentRouteName } from "@hooks";
+import { userImageUrl } from "./Header.constants";
 
 function Header() {
   const routeName = useCurrentRouteName();
@@ -16,11 +17,7 @@ function Header() {
           <Icon name="flow" className={styles.icon} />
           <Icon name="bell" className={styles.icon} />
         </div>
-        <img
-          className={styles.image}
-          src="https://avatars.githubusercontent.com/u/179385380?v=4"
-          alt="user"
-        />
+        <img className={styles.image} src={userImageUrl} alt="user" />
       </div>
     </header>
   );
