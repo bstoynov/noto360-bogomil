@@ -17,7 +17,12 @@ function Header() {
           <Icon name="flow" className={styles.icon} />
           <Icon name="bell" className={styles.icon} />
         </div>
-        <img className={styles.image} src={userImageUrl} alt="user" />
+        <img
+          className={styles.image}
+          src={userImageUrl}
+          alt="user"
+          draggable={false}
+        />
       </div>
     </header>
   );
