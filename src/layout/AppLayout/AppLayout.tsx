@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "@features/navbar/components/Navbar/Navbar";
 import styles from "./AppLayout.module.scss";
+import { Navbar } from "@features/navbar";
+import Header from "@features/header/components/Header/Header";
 
 function AppLayout() {
   return (
@@ -8,9 +9,12 @@ function AppLayout() {
       <aside className={styles.side}>
         <Navbar />
       </aside>
-      <main className={styles.main}>
-        <Outlet />
-      </main>
+      <div className={styles.headerMain}>
+        <Header />
+        <main className={styles.main}>
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 }

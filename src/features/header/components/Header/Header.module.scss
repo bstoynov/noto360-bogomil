@@ -1,0 +1,38 @@
+.header {
+  background: $bg-light;
+  padding: $space-400 $space-600;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid $border-on-light-muted;
+}
+
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  display: flex;
+  align-items: center;
+  padding: 0 $space-500;
+  gap: $space-500;
+}
+
+.title {
+  @include heading-l;
+  color: $text-on-light;
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: $space-500;
+}
+
+.icon {
+  width: $space-600;
+  color: $text-on-light-muted;
+}
+
+.image {
+  height: $space-1000;
+  border-radius: $radius-full;
+}

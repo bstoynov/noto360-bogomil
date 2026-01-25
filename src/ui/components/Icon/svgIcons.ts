@@ -18,6 +18,8 @@ import settings from "@icons/settings.svg";
 import users from "@icons/users.svg";
 import warning from "@icons/warning.svg";
 import sortArrows from "@icons/sort-arrows.svg";
+import plus from "@icons/plus.svg";
+import bell from "@icons/bell.svg";
 
 export default {
   arrowCircle,
@@ -40,4 +42,6 @@ export default {
   users,
   warning,
   sortArrows,
+  plus,
+  bell,
 };

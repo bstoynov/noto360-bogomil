@@ -5,10 +5,10 @@ export const navbarConfig: NavbarConfig = [
   {
     groupName: "Main",
     items: [
-      { iconName: "home", text: "Dashboard", to: ROUTES.Dashboard },
-      { iconName: "file", text: "Cases", to: ROUTES.Cases },
-      { iconName: "search", text: "Legal Search", to: ROUTES.LegalSearch },
-      { iconName: "layout", text: "Smart Review", to: ROUTES.SmartReview },
+      { iconName: "home", text: "Dashboard", to: ROUTES.Dashboard.path },
+      { iconName: "file", text: "Cases", to: ROUTES.Cases.path },
+      { iconName: "search", text: "Legal Search", to: ROUTES.LegalSearch.path },
+      { iconName: "layout", text: "Smart Review", to: ROUTES.SmartReview.path },
     ],
   },
   {
@@ -17,23 +17,23 @@ export const navbarConfig: NavbarConfig = [
       {
         iconName: "chart",
         text: "Compliance View",
-        to: ROUTES.Compliance,
+        to: ROUTES.Compliance.path,
       },
-      { iconName: "clipboard", text: "Legal Forms", to: ROUTES.Forms },
+      { iconName: "clipboard", text: "Legal Forms", to: ROUTES.Forms.path },
     ],
   },
   {
     groupName: "Management",
     items: [
-      { iconName: "users", text: "Team", to: ROUTES.Team },
-      { iconName: "flow", text: "Integrations", to: ROUTES.Integrations },
+      { iconName: "users", text: "Team", to: ROUTES.Team.path },
+      { iconName: "flow", text: "Integrations", to: ROUTES.Integrations.path },
     ],
   },
   {
     groupName: "Other",
     items: [
-      { iconName: "settings", text: "Settings", to: ROUTES.Settings },
-      { iconName: "help", text: "Support Center", to: ROUTES.Support },
+      { iconName: "settings", text: "Settings", to: ROUTES.Settings.path },
+      { iconName: "help", text: "Support Center", to: ROUTES.Support.path },
     ],
   },
 ];

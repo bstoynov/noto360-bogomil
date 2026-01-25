@@ -5,19 +5,19 @@ import { DashboardPage, ConstructionPage } from "@features/dashboard/pages";
 
 const router = createBrowserRouter([
   {
-    path: ROUTES.Dashboard,
+    path: ROUTES.Dashboard.path,
     element: <AppLayout />,
     children: [
       { index: true, element: <DashboardPage /> },
-      { path: ROUTES.Cases, element: <ConstructionPage /> },
-      { path: ROUTES.LegalSearch, element: <ConstructionPage /> },
-      { path: ROUTES.SmartReview, element: <ConstructionPage /> },
-      { path: ROUTES.Compliance, element: <ConstructionPage /> },
-      { path: ROUTES.Forms, element: <ConstructionPage /> },
-      { path: ROUTES.Team, element: <ConstructionPage /> },
-      { path: ROUTES.Integrations, element: <ConstructionPage /> },
-      { path: ROUTES.Settings, element: <ConstructionPage /> },
-      { path: ROUTES.Support, element: <ConstructionPage /> },
+      { path: ROUTES.Cases.path, element: <ConstructionPage /> },
+      { path: ROUTES.LegalSearch.path, element: <ConstructionPage /> },
+      { path: ROUTES.SmartReview.path, element: <ConstructionPage /> },
+      { path: ROUTES.Compliance.path, element: <ConstructionPage /> },
+      { path: ROUTES.Forms.path, element: <ConstructionPage /> },
+      { path: ROUTES.Team.path, element: <ConstructionPage /> },
+      { path: ROUTES.Integrations.path, element: <ConstructionPage /> },
+      { path: ROUTES.Settings.path, element: <ConstructionPage /> },
+      { path: ROUTES.Support.path, element: <ConstructionPage /> },
     ],
   },
 ]);

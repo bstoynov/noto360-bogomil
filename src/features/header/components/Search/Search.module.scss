@@ -1,0 +1,38 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+
+.iconWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: $space-400;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: $space-500;
+  color: $text-on-dark-muted;
+}
+
+.input {
+  width: 100%;
+  @include body-m;
+  line-height: 1;
+  color: $text-on-light;
+  border: 1px solid $border-on-light-muted;
+  border-radius: $radius-200;
+  padding: $space-300;
+  padding-left: $space-1200;
+
+  &:focus {
+    outline: 2px solid $border-on-dark-muted;
+  }
+
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+}

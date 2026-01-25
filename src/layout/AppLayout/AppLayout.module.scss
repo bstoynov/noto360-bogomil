@@ -14,9 +14,15 @@
   background: $bg-dark;
 }
 
-.main {
-  margin-left: 240px;
+.headerMain {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  margin-left: 240px;
+}
+
+.main {
   display: flex;
   justify-content: center;
 }
