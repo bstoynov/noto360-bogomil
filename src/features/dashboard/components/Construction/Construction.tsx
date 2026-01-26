@@ -8,7 +8,7 @@ function Construction() {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>
-        <span>{routeName}</span>
+        <span className={styles.route}>{routeName}</span>
         <span className={styles.suffix}>is under construction</span>
       </h2>
       <AnimationPlayer name="construction" className={styles.animation} />
