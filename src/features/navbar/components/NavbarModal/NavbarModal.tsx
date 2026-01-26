@@ -8,13 +8,12 @@ function NavbarModal({ open, onClose }: NavbarModalProps) {
     open && (
       <Modal>
         <div className={styles.content}>
-          <div className={styles.close}>
-            <IconButton
-              name="close"
-              className={styles.icon}
-              onClick={onClose}
-            />
-          </div>
+          <IconButton
+            name="close"
+            className={styles.icon}
+            buttonClassName={styles.close}
+            onClick={onClose}
+          />
           <Navbar onNavigation={onClose} />
         </div>
       </Modal>
