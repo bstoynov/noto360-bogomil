@@ -13,69 +13,71 @@ export default async function handler(req, res) {
 
   res.status(200).json({
     "1": {
-      "header": "Driver's Licence",
-      "imageUrl": "https://placehold.co/400x250?text=Driver%27s+Licence",
-      "shortDescription": "Upload a photo of your driver's licence",
-      "description": "Please upload clear photos of both sides of your driver's licence. Make sure all text is legible and the document is not expired.",
+      "header": "Proof of Address",
+      "shortDescription": "Upload a document confirming your current residential address.",
+      "description": "Upload a document that confirms your current residential address. The document must be recent and from a reputable source.",
       "acceptedDocuments": [
-        "Driver's Licence"
+        "Utility Bill",
+        "Bank statement",
+        "Insurance documents",
+        "Registered investment account statement"
       ],
       "requirements": [
-        "Not expired",
-        "All four corners visible",
-        "Text must be legible"
+        "Must be from a reputable source",
+        "Must contain your full name and address",
+        "Must be issued within the last 90 days",
+        "Must contain a unique identifying number"
       ],
       "requiredDocuments": [
-        {
-          "documentId": 1,
-          "name": "Front side"
-        },
-        {
-          "documentId": 2,
-          "name": "Back side"
-        }
+        { "documentId": 1, "name": "document" }
       ]
     },
     "2": {
-      "header": "Passport",
-      "imageUrl": "https://placehold.co/400x250?text=Passport",
-      "shortDescription": "Upload a photo of your passport",
-      "description": "Please upload a clear photo of your passport's main page. Make sure all text is legible and the document is not expired.",
+      "header": "Upload your ID",
+      "shortDescription": "Upload clear photos of the front and back of your government-issued ID.",
+      "description": "Upload clear photos of both the front and back of your government-issued ID. Make sure all details are readable and there is no glare.",
       "acceptedDocuments": [
-        "Passport"
+        "Driver's License",
+        "Ontario Photo Card",
+        "Passport",
+        "Birth Certificate"
       ],
       "requirements": [
-        "Not expired",
-        "Photo page clearly visible",
-        "Text must be legible"
+        "Must match your registration details",
+        "All four corners must be visible",
+        "Must be current/valid — expired documents not accepted"
       ],
       "requiredDocuments": [
-        {
-          "documentId": 3,
-          "name": "Photo page"
-        }
+        { "documentId": 1, "name": "front side" },
+        { "documentId": 2, "name": "back side" }
       ]
     },
     "3": {
-      "header": "Proof of Address",
-      "imageUrl": "https://placehold.co/400x250?text=Proof+of+Address",
-      "shortDescription": "Upload a utility bill or bank statement",
-      "description": "Please upload a recent utility bill or bank statement (within the last 3 months) showing your full name and address.",
-      "acceptedDocuments": [
-        "Utility Bill",
-        "Bank Statement",
-        "Government Letter"
-      ],
+      "header": "Bank Statement",
+      "shortDescription": "Upload a recent bank statement showing your name and account details.",
+      "description": "Upload a recent bank statement. The document must clearly show your name and account details.",
+      "acceptedDocuments": [],
       "requirements": [
-        "Dated within last 3 months",
-        "Full name visible",
-        "Full address visible"
+        "Must show your full name",
+        "Must be issued within the last 90 days"
       ],
       "requiredDocuments": [
-        {
-          "documentId": 4,
-          "name": "Document"
-        }
+        { "documentId": 1, "name": "document" }
+      ]
+    },
+    "4": {
+      "header": "Payment Method",
+      "shortDescription": "Upload photos of the front and back of your debit or credit card.",
+      "description": "Upload clear photos of both the front and back of your debit or credit card used for deposits.",
+      "acceptedDocuments": [],
+      "requirements": [
+        "First 6 digits, last 4 digits, and expiry date must be visible",
+        "VV and remaining digits can be covered with paper",
+        "Do NOT use digital editing tools — only physical paper accepted"
+      ],
+      "requiredDocuments": [
+        { "documentId": 1, "name": "front of card" },
+        { "documentId": 2, "name": "back of card" }
       ]
     }
   });
