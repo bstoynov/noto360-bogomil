@@ -11,8 +11,11 @@ export default async function handler(req, res) {
 
   await delay(Math.random() * 1000);
 
+  const statuses = ['ExtraInformation', 'InReview', 'Verified'];
+  const status = statuses[Math.floor(Math.random() * statuses.length)];
+
   res.status(200).json({
-    "status": "New",
+    "status": status,
     "activeRequests": [
       {
         "id": 31,
