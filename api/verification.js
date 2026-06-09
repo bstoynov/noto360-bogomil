@@ -20,56 +20,56 @@ export default async function handler(req, res) {
       {
         "id": 31,
         "requestType": "Onfido",
-        "requestDefinition": 1,
+        "requestDefinitionId": 1,
         "status": "Pending",
         "documents": []
       },
       {
         "id": 32,
         "requestType": "Email",
-        "requestDefinition": 2,
+        "requestDefinitionId": 2,
         "status": "Pending",
         "documents": []
       },
       {
         "id": 33,
         "requestType": "Document",
-        "requestDefinition": 3,
+        "requestDefinitionId": 3,
         "status": "New",
         "documents": []
       },
       {
         "id": 34,
         "requestType": "Document",
-        "requestDefinition": 4,
+        "requestDefinitionId": 4,
         "status": "New",
         "documents": []
       },
       {
         "id": 35,
         "requestType": "Document",
-        "requestDefinition": 5,
+        "requestDefinitionId": 5,
         "status": "Pending",
         "documents": []
       },
       {
         "id": 36,
         "requestType": "Document",
-        "requestDefinition": 6,
+        "requestDefinitionId": 6,
         "status": "New",
         "documents": []
       },
       {
         "id": 37,
         "requestType": "Document",
-        "requestDefinition": 7,
+        "requestDefinitionId": 7,
         "status": "New",
         "documents": []
       },
       {
         "id": 38,
         "requestType": "Text",
-        "requestDefinition": 8,
+        "requestDefinitionId": 8,
         "status": "New",
         "documents": []
       }
@@ -78,56 +78,56 @@ export default async function handler(req, res) {
       {
         "id": 41,
         "requestType": "Onfido",
-        "requestDefinition": 1,
+        "requestDefinitionId": 1,
         "status": "Approved",
         "documents": []
       },
       {
         "id": 42,
         "requestType": "Email",
-        "requestDefinition": 2,
+        "requestDefinitionId": 2,
         "status": "Approved",
         "documents": []
       },
       {
         "id": 43,
         "requestType": "Document",
-        "requestDefinition": 3,
+        "requestDefinitionId": 3,
         "status": "Approved",
         "documents": []
       },
       {
         "id": 44,
         "requestType": "Document",
-        "requestDefinition": 4,
+        "requestDefinitionId": 4,
         "status": "Rejected",
         "documents": []
       },
       {
         "id": 45,
         "requestType": "Document",
-        "requestDefinition": 5,
+        "requestDefinitionId": 5,
         "status": "Approved",
         "documents": []
       },
       {
         "id": 46,
         "requestType": "Document",
-        "requestDefinition": 6,
+        "requestDefinitionId": 6,
         "status": "Approved",
         "documents": []
       },
       {
         "id": 47,
         "requestType": "Document",
-        "requestDefinition": 7,
+        "requestDefinitionId": 7,
         "status": "Rejected",
         "documents": []
       },
       {
         "id": 48,
         "requestType": "Text",
-        "requestDefinition": 8,
+        "requestDefinitionId": 8,
         "status": "Approved",
         "documents": []
       }
