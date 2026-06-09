@@ -18,12 +18,6 @@ export default async function handler(req, res) {
         "type": "Onfido",
         "showBOCreateRequestCheckbox": false,
         "header": "Start Self-verification process",
-        "iconUrl": "{placeholder}",
-        "shortDescription": "{placeholder}",
-        "longDescription": "{placeholder}",
-        "acceptedDocuments": [],
-        "requirements": [],
-        "requiredDocuments": [],
         "documentDataFields": [
           "VerifiedData",
           "IdentificationType",
@@ -40,12 +34,8 @@ export default async function handler(req, res) {
         "type": "Email",
         "showBOCreateRequestCheckbox": false,
         "header": "Email verification",
-        "iconUrl": "{placeholder}",
         "shortDescription": "Please check your email inbox, we have reached out to you about requesting more information.",
         "longDescription": "Please check your email inbox, we have reached out to you about requesting more information.",
-        "acceptedDocuments": [],
-        "requirements": [],
-        "requiredDocuments": [],
         "documentDataFields": [
           "VerifiedData",
           "IdentificationType",
@@ -62,7 +52,6 @@ export default async function handler(req, res) {
         "type": "Document",
         "showBOCreateRequestCheckbox": true,
         "header": "Proof of Address",
-        "iconUrl": "{placeholder}",
         "shortDescription": "Upload a document that confirms your current residential address. The document must be recent and from a reputable source.",
         "longDescription": "Upload a document that confirms your current residential address. The document must be recent and from a reputable source.",
         "acceptedDocuments": [
@@ -94,7 +83,6 @@ export default async function handler(req, res) {
         "type": "Document",
         "showBOCreateRequestCheckbox": true,
         "header": "Upload your ID",
-        "iconUrl": "{placeholder}",
         "shortDescription": "Upload clear photos of both the front and back of your government-issued ID. Make sure all details are readable and there is no glare.",
         "longDescription": "Upload clear photos of both the front and back of your government-issued ID. Make sure all details are readable and there is no glare.",
         "acceptedDocuments": [
@@ -126,10 +114,8 @@ export default async function handler(req, res) {
         "type": "Document",
         "showBOCreateRequestCheckbox": true,
         "header": "Selfie with ID",
-        "iconUrl": "{placeholder}",
         "shortDescription": "Upload a photo of yourself holding your government-issued ID next to your face. Both your face and the ID must be clearly visible.",
         "longDescription": "Upload a photo of yourself holding your government-issued ID next to your face. Both your face and the ID must be clearly visible.",
-        "acceptedDocuments": [],
         "requirements": [
           "Photo must include your face and the ID next to it",
           "All details on the ID should be readable and not blurry",
@@ -152,10 +138,8 @@ export default async function handler(req, res) {
         "type": "Document",
         "showBOCreateRequestCheckbox": true,
         "header": "Bank Statement",
-        "iconUrl": "{placeholder}",
         "shortDescription": "Upload a recent bank statement. The document must clearly show your name and account details.",
         "longDescription": "Upload a recent bank statement. The document must clearly show your name and account details.",
-        "acceptedDocuments": [],
         "requirements": [
           "Must show your full name",
           "Must be issued within the last 90 days"
@@ -177,10 +161,8 @@ export default async function handler(req, res) {
         "type": "Document",
         "showBOCreateRequestCheckbox": true,
         "header": "Payment Method",
-        "iconUrl": "{placeholder}",
         "shortDescription": "Upload clear photos of both the front and back of your debit or credit card used for deposits.",
         "longDescription": "Upload clear photos of both the front and back of your debit or credit card used for deposits.",
-        "acceptedDocuments": [],
         "requirements": [
           "First 6 digits, last 4 digits, and expiry date must be visible",
           "VV and remaining digits can be covered with paper",
@@ -203,15 +185,12 @@ export default async function handler(req, res) {
         "type": "Text",
         "showBOCreateRequestCheckbox": true,
         "header": "Clarification of Relationship",
-        "iconUrl": "{placeholder}",
         "shortDescription": "Provide a written explanation that clarifies the relationship between the account holder and the payment method owner.",
         "longDescription": "Provide a written explanation that clarifies the relationship between the account holder and the payment method owner.",
-        "acceptedDocuments": [],
         "requirements": [
           "Must clearly show the relationship between account holder and payment method owner",
           "All details must be accurate and complete"
         ],
-        "requiredDocuments": [],
         "documentDataFields": [
           "VerifiedData",
           "IdentificationType",
